@@ -1,0 +1,18 @@
+{
+    "host": "195.14.122.23",
+    "username": "stage_amplio",
+    "password": "Je6SuyY4zQ2hcPrT",
+    "remotePath": "/wp-content/themes/amplio-theme/",
+    "protocol": "ftp",
+    "port": 0,
+    "fileNameEncoding": "utf8",
+    "autoUpload": true,
+    "autoDelete": true,
+    "autoDownload": true,
+    "ignore": [
+        ".git",
+        "/.vscode",
+        "/.DS_Store",
+        "node_modules"
+    ]
+}

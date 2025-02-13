@@ -1,0 +1,28 @@
+@import 'helpers/normalize';
+@import 'helpers/variables';
+@import 'helpers/fonts';
+@import 'helpers/content';
+@import 'helpers/helper';
+
+
+//elements
+@import 'elements/button';
+@import 'elements/link';
+@import 'elements/table';
+@import 'elements/accordion';
+
+//helpers
+@import 'helpers/page-list';
+@import 'helpers/ui';
+
+//Components
+@import 'components/header';
+@import 'components/footer';
+@import 'components/hero';
+@import 'components/why';
+@import 'components/step';
+@import 'components/document';
+
+@import 'components/404';
+@import 'components/page';
+@import 'components/modal';

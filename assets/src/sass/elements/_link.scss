@@ -1,0 +1,12 @@
+.link{
+    a{
+        color: $primary;
+        font-size: 1rem;
+        border-bottom: 1px solid $primary;
+        transition: 0.2s ease;
+        &:hover{
+            border-color: transparent;
+            color: $blue-hover;
+        }
+    }
+}

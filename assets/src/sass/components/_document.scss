@@ -1,0 +1,82 @@
+.document{
+    width: 100%;
+    &__wrapper{
+        width: 100%;
+        max-width: 1220px;
+    }
+    &__group{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__image{
+        max-width: 520px;
+        width: 100%;
+    }
+    &__wrapper__inner{
+        width: 100%;
+        max-width: 560px;
+        margin-top: 30px;
+    }
+    &__tabs{
+        width: 100%;
+        margin-bottom: 20px;
+        &__item{
+            display: none;
+        }
+        &__item.active{
+            display: block;
+        }
+        &__head{
+            width: 100%;
+            max-width: 560px;
+            display: flex;
+            justify-content: space-between;
+            button{
+                text-align: center;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-bottom: 1px solid #BCBCBC;
+                padding: 15px 20px;
+                color: #69696D;
+                font-size: 1.125rem;
+                transition: all 0.3s;
+                &:hover{
+                    color: $blue;
+                }
+            }
+            .active{
+                border-bottom: 1px solid $blue;
+                color: #000000;
+            }
+        }
+        &__content{
+            width: 100%;
+            margin-top: 20px;
+            padding-right: 20px;
+            height: 440px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: $blue #E2E7F8;
+            &::-webkit-scrollbar {
+                width: 6px; 
+            }
+            
+            &::-webkit-scrollbar-track {
+                background: #E2E7F8;
+                border-radius: 10px;
+            }
+            
+            &::-webkit-scrollbar-thumb {
+                background: $blue; 
+                border-radius: 10px;
+            }
+
+        }
+    }
+    
+    
+
+}

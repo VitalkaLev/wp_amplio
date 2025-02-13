@@ -1,0 +1,46 @@
+.btn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+    height: 80px;
+    padding: 30px 60px;
+    border-radius: 16px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    transition: 0.4s ease;
+    position: relative;
+    span{
+        font-size: 1rem;
+    }
+    svg{
+        margin-left: 1.4rem;
+    }
+}
+
+
+.btn-primary{
+    span{
+        color: black; 
+        font-weight: 400;
+    }
+}
+
+.btn-light{
+    span{
+        color: white;
+        font-weight: 400;
+    }
+}
+
+@media (max-width:768px) {
+    .btn{
+        padding: 20px 28px;
+        width: 100%;
+        span{
+            font-size: 1rem;
+        }
+    }
+}

@@ -1,0 +1,95 @@
+.accordion{
+    .accordion__content {
+        overflow: hidden;
+        opacity: 0;
+        height: 0;
+        transition: all 0.5s;
+    }
+    .accordion__icon{
+        width: 60px;
+        height: 60px;
+        background-color: #ffffff;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .accordion__content__item {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        padding: 12px 34px;
+        border: 1px solid #EBEEFA;
+        border-radius: 30px;
+        overflow: hidden;
+        margin-bottom: 10px;
+        transition: all 0.3s;
+        &:hover{
+            background-color: white;
+
+        }
+        cursor: pointer;
+        span {
+            max-width: 400px;
+            padding-left: 10px;
+            p{
+                color: #303030;
+                font-size: 1rem;
+                font-weight: 400;
+            }
+        }
+        svg{
+            width: 32px;
+            height: 32px;
+            &:hover path{
+                fill: $green !important;
+            }
+        }
+    }
+    .accordion__item{
+        transition: 1s ease;
+        svg{
+            transition: all 0.3s;
+            &:hover{
+                path{
+                    fill: $blue;
+                }
+            }
+        }
+    }
+    .accordion__item.active{
+        z-index: 99;
+        .accordion__content {
+            height: auto;
+            opacity: 1;
+            transition: all 0.5s;
+        }
+        .accordion__header svg{
+            transform: rotate(180deg);
+        }
+    }
+    .accordion__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        padding: 0 10px 0 34px;
+        font-size: 24px;
+        font-weight: 400;
+        color: #1E1E1E;
+        transition: all 0.3s;
+        background: #E2E7F8;
+        border-radius: 30px;
+        overflow: hidden;
+        width: 100%;
+        margin-bottom: 12px;
+        &:hover{
+            color: $blue;
+        }
+        .active{
+            border-bottom: 1px solid $blue;
+            color: #000000;
+        }
+    }
+}
