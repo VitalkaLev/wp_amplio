@@ -12,6 +12,7 @@
 @import 'elements/accordion';
 
 //helpers
+@import 'helpers/animations';
 @import 'helpers/page-list';
 @import 'helpers/ui';
 
@@ -22,6 +23,9 @@
 @import 'components/why';
 @import 'components/step';
 @import 'components/document';
+@import 'components/credit';
+@import 'components/faq';
+@import 'components/help';
 
 @import 'components/404';
 @import 'components/page';

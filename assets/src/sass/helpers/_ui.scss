@@ -46,11 +46,15 @@
         margin-bottom: 25px;
         flex-wrap: wrap;
     }
+    &__content__head{
+        margin-bottom: 0px;
+    }
     &__group {
         display: flex;
         align-items: center;
         gap: 20px;
         flex-wrap: wrap;
+        width: 100%;
     }
 }
 

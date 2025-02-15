@@ -48,16 +48,12 @@ body {
     color: $text;
     background-color: #F8F9FC;
 }
-
-.wrapper{
-    max-width: 1280px;
+main {
     width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+}
+.wrapper{
+    width: 100%;
     min-height: 100vh;
-    justify-content: space-between;
-    align-items: flex-start;
 }
 
 .container{
@@ -83,12 +79,15 @@ body::-webkit-scrollbar-track {
 }
 
 .section{
-    margin-bottom: 60px;
+    > div {
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 1024px) {
-    .section{
-        margin-bottom: 40px;
+    .page__wrapper{
+        max-width: 90%;
+        margin: 0 auto;
     }
     .main{
         margin-top: 100px;
