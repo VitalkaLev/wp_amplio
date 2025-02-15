@@ -8,6 +8,25 @@ html {
     scroll-behavior: smooth;
 }
 
+* {
+    outline: none;
+}
+*:focus {
+    outline: none;
+}
+  
+*:focus-visible {
+    outline: none;
+}
+
+*:active{
+    outline: none;
+}
+*{
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
 h1,
 h2,
 h3,

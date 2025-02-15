@@ -67,14 +67,11 @@
         width: 100%;
         max-width: 60px;
         border: 1px solid #E6E6E6;
-        
         &:hover{
             background-color: $primary;
             border-color: $primary;
-            svg{
-                path{
-                    stroke: white;
-                }
+            path{
+                stroke: white;
             }
         }
     }
@@ -101,15 +98,25 @@
             background-color: $primary;
         }
     }
+    &__button-close{
+        svg{
+            path{
+                stroke: white;
+            }
+        }
+    }
     &-mobile{
         display: none;
         .header__button-menu{
             display: flex;
             &:hover{
-                path{
-                    stroke:white;
+                .close{
+                    path{
+                        stroke:white;
+                    }
                 }
             }
+            
         }
     }
     

@@ -98,22 +98,22 @@
                 },
                 "main.js": {
                   "type": "-",
-                  "size": 10508,
-                  "lmtime": 1739623188625.3518,
+                  "size": 9959,
+                  "lmtime": 1739631867088.2493,
                   "modified": false
                 },
                 "main.min.js": {
                   "type": "-",
-                  "size": 5699,
-                  "lmtime": 1739623188625,
+                  "size": 5431,
+                  "lmtime": 1739631867088,
                   "modified": false
                 }
               },
               "css": {
                 "main.min.css": {
                   "type": "-",
-                  "size": 77716,
-                  "lmtime": 1739569397290.999,
+                  "size": 74334,
+                  "lmtime": 1739642385938.999,
                   "modified": false
                 },
                 "swiper-bundle.css": {
@@ -145,20 +145,20 @@
                   },
                   "_faq.scss": {
                     "type": "-",
-                    "size": 3655,
-                    "lmtime": 1739546040579.563,
+                    "size": 3734,
+                    "lmtime": 1739641423607.1292,
                     "modified": false
                   },
                   "_footer.scss": {
                     "type": "-",
-                    "size": 9701,
-                    "lmtime": 1739569293620.396,
+                    "size": 9917,
+                    "lmtime": 1739641948961.7197,
                     "modified": false
                   },
                   "_header.scss": {
                     "type": "-",
-                    "size": 11114,
-                    "lmtime": 1739569396358.2437,
+                    "size": 8020,
+                    "lmtime": 1739642385194.8994,
                     "modified": false
                   },
                   "_help.scss": {
@@ -169,8 +169,8 @@
                   },
                   "_hero.scss": {
                     "type": "-",
-                    "size": 14772,
-                    "lmtime": 1739569293667.4224,
+                    "size": 14794,
+                    "lmtime": 1739632305509.8848,
                     "modified": false
                   },
                   "_modal.scss": {
@@ -193,8 +193,8 @@
                   },
                   "_why.scss": {
                     "type": "-",
-                    "size": 3403,
-                    "lmtime": 1739569293620.8306,
+                    "size": 3521,
+                    "lmtime": 1739632413896.9338,
                     "modified": false
                   }
                 },
@@ -207,8 +207,8 @@
                 "elements": {
                   "_accordion.scss": {
                     "type": "-",
-                    "size": 3163,
-                    "lmtime": 1739546771276.675,
+                    "size": 3197,
+                    "lmtime": 1739634594456.6257,
                     "modified": false
                   },
                   "_button.scss": {
@@ -233,20 +233,20 @@
                 "helpers": {
                   "_animations.scss": {
                     "type": "-",
-                    "size": 254,
-                    "lmtime": 1739454354713.9495,
+                    "size": 203,
+                    "lmtime": 1739629263016.207,
                     "modified": false
                   },
                   "_content.scss": {
                     "type": "-",
-                    "size": 1255,
-                    "lmtime": 1739568840091.1746,
+                    "size": 1557,
+                    "lmtime": 1739642064531.7083,
                     "modified": false
                   },
                   "_fonts.scss": {
                     "type": "-",
-                    "size": 2661,
-                    "lmtime": 1739310398162.9753,
+                    "size": 2109,
+                    "lmtime": 1739633431558.8306,
                     "modified": false
                   },
                   "_helper.scss": {
@@ -269,14 +269,14 @@
                   },
                   "_ui.scss": {
                     "type": "-",
-                    "size": 1449,
-                    "lmtime": 0,
+                    "size": 1526,
+                    "lmtime": 1739633839131.166,
                     "modified": false
                   },
                   "_variables.scss": {
                     "type": "-",
                     "size": 189,
-                    "lmtime": 0,
+                    "lmtime": 1739633953258.1372,
                     "modified": false
                   }
                 },
@@ -298,27 +298,27 @@
               "html": {
                 "home.html": {
                   "type": "-",
-                  "size": 121239,
-                  "lmtime": 1739569574600.1572,
+                  "size": 121134,
+                  "lmtime": 1739641004892.1245,
                   "modified": false
                 },
                 "index.html": {
                   "type": "-",
                   "size": 19565,
-                  "lmtime": 0,
+                  "lmtime": 1739640835446.1946,
                   "modified": false
                 },
                 "page.html": {
                   "type": "-",
-                  "size": 56946,
-                  "lmtime": 1739299980104.471,
+                  "size": 57219,
+                  "lmtime": 1739634087752.6755,
                   "modified": false
                 },
                 "ui.html": {
                   "type": "-",
-                  "size": 4744,
-                  "lmtime": 1739299988337.37,
-                  "modified": true
+                  "size": 5087,
+                  "lmtime": 1739633985432.7173,
+                  "modified": false
                 }
               },
               "images": {
@@ -364,6 +364,36 @@
                   "lmtime": 1739304752127.6016,
                   "modified": false
                 },
+                "visa-1.svg": {
+                  "type": "-",
+                  "size": 3703,
+                  "lmtime": 1739632870925.9707,
+                  "modified": false
+                },
+                "visa-2.svg": {
+                  "type": "-",
+                  "size": 19568,
+                  "lmtime": 1739632777403.0378,
+                  "modified": false
+                },
+                "visa-3.svg": {
+                  "type": "-",
+                  "size": 12508,
+                  "lmtime": 1739632771046.6099,
+                  "modified": false
+                },
+                "visa-4.svg": {
+                  "type": "-",
+                  "size": 43842,
+                  "lmtime": 1739632851182.2327,
+                  "modified": false
+                },
+                "visa.png": {
+                  "type": "-",
+                  "size": 15367,
+                  "lmtime": 1739448676440.064,
+                  "modified": false
+                },
                 "why-1.png": {
                   "type": "-",
                   "size": 33000,
@@ -380,12 +410,6 @@
                   "type": "-",
                   "size": 31707,
                   "lmtime": 1739448582431.5942,
-                  "modified": false
-                },
-                "visa.png": {
-                  "type": "-",
-                  "size": 15367,
-                  "lmtime": 1739448676440.064,
                   "modified": false
                 }
               },
@@ -479,8 +503,8 @@
           },
           "page.php": {
             "type": "-",
-            "size": 286,
-            "lmtime": 1739275148969.6165,
+            "size": 233,
+            "lmtime": 1739634197835.1895,
             "modified": false
           },
           "screenshot.png": {
