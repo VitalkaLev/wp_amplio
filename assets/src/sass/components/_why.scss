@@ -28,9 +28,9 @@
         display: flex;
         justify-content: space-between;
         margin-top: 40px;
+        gap: 20px;
     }
     &__item{
-        max-width: 360px;
         width: 100%;
         min-height: 305px;
         padding: 36px 40px;

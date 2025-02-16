@@ -8,8 +8,8 @@
               "css": {
                 "main.min.css": {
                   "type": "-",
-                  "size": 57667,
-                  "lmtime": 1739276348325,
+                  "size": 74334,
+                  "lmtime": 1739642385938.999,
                   "modified": false
                 }
               },
@@ -50,14 +50,20 @@
                     "size": 135712,
                     "lmtime": 1739266105174.999,
                     "modified": false
+                  },
+                  "Geologica_Cursive-Light.ttf": {
+                    "type": "-",
+                    "size": 135948,
+                    "lmtime": 1739304143927.999,
+                    "modified": false
                   }
                 }
               },
               "js": {
                 "main.min.js": {
                   "type": "-",
-                  "size": 1439,
-                  "lmtime": 1739193147548,
+                  "size": 5431,
+                  "lmtime": 1739631867088,
                   "modified": false
                 }
               }
@@ -71,49 +77,27 @@
             "gulpfile.js": {
               "type": "-",
               "size": 1814,
-              "lmtime": 0,
+              "lmtime": 1739259479253.3923,
               "modified": false
             },
             "package.json": {
               "type": "-",
               "size": 731,
-              "lmtime": 0,
+              "lmtime": 1737985476000.791,
               "modified": false
             },
             "package-lock.json": {
               "type": "-",
               "size": 798271,
-              "lmtime": 0,
+              "lmtime": 1737985475999.3462,
               "modified": false
             },
             "src": {
-              "js": {
-                "libs": {
-                  "swiper.min.js": {
-                    "type": "-",
-                    "size": 173067,
-                    "lmtime": 1739305115570.077,
-                    "modified": false
-                  }
-                },
-                "main.js": {
-                  "type": "-",
-                  "size": 9959,
-                  "lmtime": 1739631867088.2493,
-                  "modified": false
-                },
-                "main.min.js": {
-                  "type": "-",
-                  "size": 5431,
-                  "lmtime": 1739631867088,
-                  "modified": false
-                }
-              },
               "css": {
                 "main.min.css": {
                   "type": "-",
-                  "size": 74334,
-                  "lmtime": 1739642385938.999,
+                  "size": 74428,
+                  "lmtime": 1739643574391,
                   "modified": false
                 },
                 "swiper-bundle.css": {
@@ -123,183 +107,75 @@
                   "modified": false
                 }
               },
-              "sass": {
-                "components": {
-                  "_404.scss": {
-                    "type": "-",
-                    "size": 471,
-                    "lmtime": 0,
-                    "modified": false
-                  },
-                  "_credit.scss": {
-                    "type": "-",
-                    "size": 11104,
-                    "lmtime": 1739569293667.2603,
-                    "modified": false
-                  },
-                  "_document.scss": {
-                    "type": "-",
-                    "size": 3350,
-                    "lmtime": 1739569293667.3462,
-                    "modified": false
-                  },
-                  "_faq.scss": {
-                    "type": "-",
-                    "size": 3734,
-                    "lmtime": 1739641423607.1292,
-                    "modified": false
-                  },
-                  "_footer.scss": {
-                    "type": "-",
-                    "size": 9917,
-                    "lmtime": 1739641948961.7197,
-                    "modified": false
-                  },
-                  "_header.scss": {
-                    "type": "-",
-                    "size": 8020,
-                    "lmtime": 1739642385194.8994,
-                    "modified": false
-                  },
-                  "_help.scss": {
-                    "type": "-",
-                    "size": 2347,
-                    "lmtime": 1739569293620.7825,
-                    "modified": false
-                  },
-                  "_hero.scss": {
-                    "type": "-",
-                    "size": 14794,
-                    "lmtime": 1739632305509.8848,
-                    "modified": false
-                  },
-                  "_modal.scss": {
-                    "type": "-",
-                    "size": 2788,
-                    "lmtime": 1739524865115.0522,
-                    "modified": false
-                  },
-                  "_page.scss": {
-                    "type": "-",
-                    "size": 125,
-                    "lmtime": 0,
-                    "modified": false
-                  },
-                  "_step.scss": {
-                    "type": "-",
-                    "size": 5625,
-                    "lmtime": 1739569293620.5232,
-                    "modified": false
-                  },
-                  "_why.scss": {
-                    "type": "-",
-                    "size": 3521,
-                    "lmtime": 1739632413896.9338,
-                    "modified": false
-                  }
-                },
+              ".DS_Store": {
+                "type": "-",
+                "size": 8196,
+                "lmtime": 1739266076468.2021,
+                "modified": false
+              },
+              "fonts": {
                 ".DS_Store": {
                   "type": "-",
                   "size": 6148,
-                  "lmtime": 0,
+                  "lmtime": 1739228766845.0154,
                   "modified": false
                 },
-                "elements": {
-                  "_accordion.scss": {
+                "geologica": {
+                  ".DS_Store": {
                     "type": "-",
-                    "size": 3197,
-                    "lmtime": 1739634594456.6257,
+                    "size": 6148,
+                    "lmtime": 1739228766844.1794,
                     "modified": false
                   },
-                  "_button.scss": {
+                  "Geologica-Bold.ttf": {
                     "type": "-",
-                    "size": 737,
-                    "lmtime": 1739476983424.0454,
+                    "size": 136504,
+                    "lmtime": 1725466116000,
                     "modified": false
                   },
-                  "_link.scss": {
+                  "Geologica_Cursive-Light.ttf": {
                     "type": "-",
-                    "size": 243,
-                    "lmtime": 0,
+                    "size": 135948,
+                    "lmtime": 1739304143928.1396,
                     "modified": false
                   },
-                  "_table.scss": {
+                  "Geologica-ExtraLight.ttf": {
                     "type": "-",
-                    "size": 1458,
-                    "lmtime": 1739478940246.205,
+                    "size": 135828,
+                    "lmtime": 1739266148266.3613,
+                    "modified": false
+                  },
+                  "Geologica-Light.ttf": {
+                    "type": "-",
+                    "size": 135756,
+                    "lmtime": 1739266115851.7485,
+                    "modified": false
+                  },
+                  "Geologica-Medium.ttf": {
+                    "type": "-",
+                    "size": 136000,
+                    "lmtime": 1725466116000,
+                    "modified": false
+                  },
+                  "Geologica-Regular.ttf": {
+                    "type": "-",
+                    "size": 135760,
+                    "lmtime": 1725466116000,
+                    "modified": false
+                  },
+                  "Geologica-Thin.ttf": {
+                    "type": "-",
+                    "size": 135712,
+                    "lmtime": 1739266105174.8438,
                     "modified": false
                   }
-                },
-                "helpers": {
-                  "_animations.scss": {
-                    "type": "-",
-                    "size": 203,
-                    "lmtime": 1739629263016.207,
-                    "modified": false
-                  },
-                  "_content.scss": {
-                    "type": "-",
-                    "size": 1557,
-                    "lmtime": 1739642064531.7083,
-                    "modified": false
-                  },
-                  "_fonts.scss": {
-                    "type": "-",
-                    "size": 2109,
-                    "lmtime": 1739633431558.8306,
-                    "modified": false
-                  },
-                  "_helper.scss": {
-                    "type": "-",
-                    "size": 2709,
-                    "lmtime": 0,
-                    "modified": true
-                  },
-                  "_normalize.scss": {
-                    "type": "-",
-                    "size": 2850,
-                    "lmtime": 0,
-                    "modified": false
-                  },
-                  "_page-list.scss": {
-                    "type": "-",
-                    "size": 2888,
-                    "lmtime": 1739300104288.9717,
-                    "modified": false
-                  },
-                  "_ui.scss": {
-                    "type": "-",
-                    "size": 1526,
-                    "lmtime": 1739633839131.166,
-                    "modified": false
-                  },
-                  "_variables.scss": {
-                    "type": "-",
-                    "size": 189,
-                    "lmtime": 1739633953258.1372,
-                    "modified": false
-                  }
-                },
-                "libs": {
-                  "_swiper.scss": {
-                    "type": "-",
-                    "size": 21129,
-                    "lmtime": 0,
-                    "modified": false
-                  }
-                },
-                "main.scss": {
-                  "type": "-",
-                  "size": 728,
-                  "lmtime": 1739454017079.0254,
-                  "modified": false
                 }
               },
               "html": {
                 "home.html": {
                   "type": "-",
-                  "size": 121134,
-                  "lmtime": 1739641004892.1245,
+                  "size": 121130,
+                  "lmtime": 1739655080892.7346,
                   "modified": false
                 },
                 "index.html": {
@@ -325,31 +201,31 @@
                 "appstore.svg": {
                   "type": "-",
                   "size": 15218,
-                  "lmtime": 0,
+                  "lmtime": 1739262855221.7917,
                   "modified": false
                 },
                 "document.jpg": {
                   "type": "-",
                   "size": 94853,
-                  "lmtime": 0,
+                  "lmtime": 1739384091179.531,
                   "modified": false
                 },
                 ".DS_Store": {
                   "type": "-",
                   "size": 6148,
-                  "lmtime": 0,
+                  "lmtime": 1739120812938.8916,
                   "modified": false
                 },
                 "googleplay.svg": {
                   "type": "-",
                   "size": 8963,
-                  "lmtime": 0,
+                  "lmtime": 1739262840429.1353,
                   "modified": false
                 },
                 "placeholder.png": {
                   "type": "-",
                   "size": 7599,
-                  "lmtime": 0,
+                  "lmtime": 1737718358326.5571,
                   "modified": false
                 },
                 "slide-1.png": {
@@ -413,14 +289,198 @@
                   "modified": false
                 }
               },
-              "fonts": {
-                "geologica": {
-                  "Geologica_Cursive-Light.ttf": {
+              "js": {
+                "libs": {
+                  "swiper.min.js": {
                     "type": "-",
-                    "size": 135948,
-                    "lmtime": 1739304143928.1396,
+                    "size": 173067,
+                    "lmtime": 1739305115570.077,
                     "modified": false
                   }
+                },
+                "main.js": {
+                  "type": "-",
+                  "size": 9959,
+                  "lmtime": 1739631867088.2493,
+                  "modified": false
+                },
+                "main.min.js": {
+                  "type": "-",
+                  "size": 5431,
+                  "lmtime": 1739631867088,
+                  "modified": false
+                }
+              },
+              "sass": {
+                "components": {
+                  "_404.scss": {
+                    "type": "-",
+                    "size": 471,
+                    "lmtime": 1738065905500.1091,
+                    "modified": false
+                  },
+                  "_credit.scss": {
+                    "type": "-",
+                    "size": 11104,
+                    "lmtime": 1739569293667.2603,
+                    "modified": false
+                  },
+                  "_document.scss": {
+                    "type": "-",
+                    "size": 3350,
+                    "lmtime": 1739569293667.3462,
+                    "modified": false
+                  },
+                  "_faq.scss": {
+                    "type": "-",
+                    "size": 3734,
+                    "lmtime": 1739641423607.1292,
+                    "modified": false
+                  },
+                  "_footer.scss": {
+                    "type": "-",
+                    "size": 9917,
+                    "lmtime": 1739641948961.7197,
+                    "modified": false
+                  },
+                  "_header.scss": {
+                    "type": "-",
+                    "size": 8223,
+                    "lmtime": 1739643573400.9387,
+                    "modified": false
+                  },
+                  "_help.scss": {
+                    "type": "-",
+                    "size": 2347,
+                    "lmtime": 1739569293620.7825,
+                    "modified": false
+                  },
+                  "_hero.scss": {
+                    "type": "-",
+                    "size": 14794,
+                    "lmtime": 1739632305509.8848,
+                    "modified": false
+                  },
+                  "_modal.scss": {
+                    "type": "-",
+                    "size": 2788,
+                    "lmtime": 1739524865115.0522,
+                    "modified": false
+                  },
+                  "_page.scss": {
+                    "type": "-",
+                    "size": 125,
+                    "lmtime": 1738098311553.359,
+                    "modified": false
+                  },
+                  "_step.scss": {
+                    "type": "-",
+                    "size": 5625,
+                    "lmtime": 1739569293620.5232,
+                    "modified": false
+                  },
+                  "_why.scss": {
+                    "type": "-",
+                    "size": 3521,
+                    "lmtime": 1739632413896.9338,
+                    "modified": false
+                  }
+                },
+                ".DS_Store": {
+                  "type": "-",
+                  "size": 6148,
+                  "lmtime": 1738412197094.323,
+                  "modified": false
+                },
+                "elements": {
+                  "_accordion.scss": {
+                    "type": "-",
+                    "size": 3197,
+                    "lmtime": 1739634594456.6257,
+                    "modified": false
+                  },
+                  "_button.scss": {
+                    "type": "-",
+                    "size": 737,
+                    "lmtime": 1739476983424.0454,
+                    "modified": false
+                  },
+                  "_link.scss": {
+                    "type": "-",
+                    "size": 243,
+                    "lmtime": 1739261287934.5044,
+                    "modified": false
+                  },
+                  "_table.scss": {
+                    "type": "-",
+                    "size": 1458,
+                    "lmtime": 1739478940246.205,
+                    "modified": false
+                  }
+                },
+                "helpers": {
+                  "_animations.scss": {
+                    "type": "-",
+                    "size": 203,
+                    "lmtime": 1739629263016.207,
+                    "modified": false
+                  },
+                  "_content.scss": {
+                    "type": "-",
+                    "size": 1557,
+                    "lmtime": 1739642064531.7083,
+                    "modified": false
+                  },
+                  "_fonts.scss": {
+                    "type": "-",
+                    "size": 2109,
+                    "lmtime": 1739633431558.8306,
+                    "modified": false
+                  },
+                  "_helper.scss": {
+                    "type": "-",
+                    "size": 2709,
+                    "lmtime": 1739436796698.8298,
+                    "modified": true
+                  },
+                  "_normalize.scss": {
+                    "type": "-",
+                    "size": 2850,
+                    "lmtime": 1737542719127.2678,
+                    "modified": false
+                  },
+                  "_page-list.scss": {
+                    "type": "-",
+                    "size": 2888,
+                    "lmtime": 1739300104288.9717,
+                    "modified": false
+                  },
+                  "_ui.scss": {
+                    "type": "-",
+                    "size": 1526,
+                    "lmtime": 1739633839131.166,
+                    "modified": false
+                  },
+                  "_variables.scss": {
+                    "type": "-",
+                    "size": 189,
+                    "lmtime": 1739633953258.1372,
+                    "modified": false
+                  }
+                },
+                "libs": {
+                  "_swiper.scss": {
+                    "type": "-",
+                    "size": 21129,
+                    "lmtime": 1738689531359.0078,
+                    "modified": false
+                  }
+                },
+                "main.scss": {
+                  "type": "-",
+                  "size": 728,
+                  "lmtime": 1739454017079.0254,
+                  "modified": false
                 }
               }
             }

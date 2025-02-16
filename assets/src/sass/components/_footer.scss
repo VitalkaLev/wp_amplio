@@ -1,6 +1,7 @@
 .footer{
     width: 100%;
     padding: 120px 0px 50px 0;
+    margin: 0 auto;
     &__wrapper{
         max-width: 1160px;
         width: 100%;
@@ -190,11 +191,13 @@
     
 }
 
+@media (max-width:1240px) {
+    .footer{
+        max-width: 87%;
+    }
+}
 @media (max-width: 774px) and (orientation: landscape) {
     .footer{
-        width: 100%;
-        max-width: 95%;
-        margin: 0 auto;
         &__bottom{
             padding: 40px 0px;
         }
@@ -253,9 +256,6 @@
 }
 @media (max-width:768px) {
     .footer{
-        width: 100%;
-        max-width: 95%;
-        margin: 0 auto;
         &__bottom{
             padding: 40px 0px;
         }

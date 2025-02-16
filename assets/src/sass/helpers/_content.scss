@@ -98,12 +98,17 @@ body::-webkit-scrollbar-track {
 }
 
 .section{
+    margin: 0 auto;
     > div {
         margin: 0 auto;
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1240px) {
+    .section {
+        max-width: 87%;
+    }
+
     .page__wrapper{
         max-width: 90%;
         margin: 0 auto;
@@ -114,3 +119,8 @@ body::-webkit-scrollbar-track {
     
 }
 
+@media (max-width: 769px) {
+    .section {
+        max-width: 100%;
+    }
+}
