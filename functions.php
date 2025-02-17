@@ -7,6 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 define('_S_VERSION', '1.0.0');
 define('PATH', get_template_directory());
 define('PATH_URL', esc_url( get_template_directory_uri()));
+define('ASSETS', esc_url( get_template_directory_uri()) . '/assets/src');
 define('THEME', 'amplio-theme');
 
 require PATH . '/inc/setup.php';

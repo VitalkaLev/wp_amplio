@@ -55,7 +55,7 @@
 @media (max-width: 465px) {
     .table{
         &__item{
-            padding: 15px;
+            padding: 15px 28px;
             &-title{
                 font-size: 14px;
                 padding-right: 50px;
@@ -64,6 +64,16 @@
             p{
                 font-size: 24px;
                 line-height: 120%;
+            }
+        }
+        &__item-title{
+            max-width: 45%;
+        }
+        &__item-value{
+            padding: 0px;
+            max-width: 55%;
+            b{
+                font-size: 14px;
             }
         }
     }

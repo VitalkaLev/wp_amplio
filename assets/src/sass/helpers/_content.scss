@@ -11,6 +11,11 @@ html {
 * {
     outline: none;
 }
+
+*{
+    letter-spacing: -0.04em;
+}
+
 *:focus {
     outline: none;
 }
@@ -22,10 +27,7 @@ html {
 *:active{
     outline: none;
 }
-*{
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-}
+
 
 h1,
 h2,
@@ -120,6 +122,10 @@ body::-webkit-scrollbar-track {
 }
 
 @media (max-width: 769px) {
+    *{
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
     .section {
         max-width: 100%;
     }

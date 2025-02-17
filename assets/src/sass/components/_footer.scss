@@ -314,7 +314,8 @@
 
 @media (max-width:475px) {
     .footer{
-        padding: 80px 15px 20px 15px;
+        max-width: calc(100% - 54px);
+        padding: 80px 0px 20px 0px;
         &__bottom{
             padding: 20px 0px;
         }
@@ -360,7 +361,7 @@
             max-width: 100%;
             gap: 10px;
             ul{
-                height: 150px;
+                height: 160px;
             }
             li{
                 max-width: 50%;
@@ -432,6 +433,16 @@
         }
         &__copyright__text{
             align-items: flex-start;
+        }
+        &__text{
+            p{
+                font-size: 14px;
+                line-height: 140%;
+            }
+            a{
+                font-size: 14px;
+            }
+            
         }
     }
 }

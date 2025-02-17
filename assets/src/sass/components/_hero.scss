@@ -518,11 +518,15 @@
 
 @media (max-width: 465px) {
  .hero{
+    &__wrapper{
+        max-width: calc(100% - 20px);
+        border-radius: 32px;
+    }
     &__content{
-        padding: 0 18px;
+        max-width: calc(100% - 34px);
+        padding: 60px 0 50px 0;
         z-index: 200;
-        margin-top: 60px;
-        margin-bottom: -50px;
+        margin: 0 auto;
         height: 600px;
         min-height: max-content;
         .btn{
@@ -531,11 +535,14 @@
         }
     }
     &__title{
-        font-size: 24px;
-        line-height: 120%;
+        font-size: 28px;
+        line-height: 100%;
         margin-bottom: 30px;
         .hero__label{
-            bottom: 0px;
+            bottom: 6px;
+            height: 20px;
+            font-size: 10px;
+            padding: 4px 10px;
         }
     }
     &__slider{
@@ -562,23 +569,29 @@
         }
     }
     &__bottom {
-        bottom: 80px;
+        margin-bottom: 80px;
+        bottom: 0;
         left: 0px;
         width: 100%;
         max-width: 50%;
         padding: 0px 0px 0px 20px;
         &__title{
             font-size: 24px;
+            margin-top: 8px;
         }
         &__subtitle{
             font-size: 14px;
+            line-height: 100%;
             span{
                 font-size: 14px;
             }
         }
         &-group{
+            &:last-child{
+                margin-bottom: 0;
+            }
             .hero__bottom__line{
-                top: 38px;
+                top: 40px;
             }
             &:nth-child(1){
                 .hero__bottom__line{
@@ -600,7 +613,7 @@
     &__decor {
         top: 30%;
         &-line {
-            bottom: 125px;
+            bottom: 150px;
             z-index: 10;
             transform: rotate(0deg) scale(1);
         }

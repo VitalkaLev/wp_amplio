@@ -111,7 +111,9 @@ function heroSwiper() {
     const imageswiper = new Swiper('.hero__slider-swiper', {
       slidesPerView: 1,
       loop: true,
-      autoplay: true,
+      autoplay: {
+        delay: 3000,
+      },
       speed: 1000,
       effect: "slide",
       allowTouchMove: false,
@@ -124,19 +126,33 @@ function heroSwiper() {
     const textSwiper = new Swiper('.hero__box-swiper', {
       effect: 'fade',
       loop: true,
-      autoplay: true,
+      autoplay: {
+        delay: 3000,
+      },
       slidesPerView: 1,
-      speed: 100,
+      speed: 1000,
       allowTouchMove: false,
     });
 
+    // Синхронізація при автоматичному переході
+    imageswiper.on('slideChangeTransitionStart', function () {
+      textSwiper.slideToLoop(imageswiper.realIndex);
+    });
+
+    textSwiper.on('slideChangeTransitionStart', function () {
+      imageswiper.slideToLoop(textSwiper.realIndex);
+    });
+
+    // Синхронізація при кліках на стрілки
     document.querySelector('.next').addEventListener('click', function () {
+      imageswiper.slideNext();
       textSwiper.slideNext();
       this.classList.add('active');
       document.querySelector('.prev').classList.remove('active');
     });
 
     document.querySelector('.prev').addEventListener('click', function () {
+      imageswiper.slidePrev();
       textSwiper.slidePrev();
       this.classList.add('active');
       document.querySelector('.next').classList.remove('active');
@@ -145,7 +161,12 @@ function heroSwiper() {
   }
 }
 
+
 function creditCalculator() {
+  const creditSection = document.querySelector('.credit');
+
+  if (!creditSection) return;
+
   const creditRange = document.getElementById('credit_amount_range');
   const creditDisplay = document.getElementById('credit_amount');
   const termRange = document.getElementById('term_range');
@@ -278,6 +299,31 @@ function fadeInSections() {
   window.addEventListener('load', checkFadeIn); // Запускаємо при завантаженні сторінки
 }
 
+function helperCollapse() {
+  const btnCollapse = document.querySelector('.btn-collapse');
+
+  if (!btnCollapse) return;
+
+  btnCollapse.addEventListener('click', function () {
+    const textElement = document.querySelector('.help__item__hide');
+    const openIcon = document.querySelector('.btn-collapse .open');
+    const closeIcon = document.querySelector('.btn-collapse .close');
+
+    const isActive = textElement.classList.contains('active');
+
+    if (!isActive) {
+      textElement.classList.add('active');
+      openIcon.classList.remove('active');
+      closeIcon.classList.add('active');
+    } else {
+      textElement.classList.remove('active');
+      openIcon.classList.add('active');
+      closeIcon.classList.remove('active');
+    }
+  });
+}
+
+
 document.addEventListener('DOMContentLoaded', function () {
   lazyLoad();
   fadeInSections();
@@ -288,5 +334,5 @@ document.addEventListener('DOMContentLoaded', function () {
   funcyboxInit();
   creditCalculator();
   faq();
- 
+  helperCollapse();
 });

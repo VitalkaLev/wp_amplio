@@ -94,10 +94,16 @@
             },
             "src": {
               "css": {
+                "fancy.min.css": {
+                  "type": "-",
+                  "size": 142360,
+                  "lmtime": 1739812855177.282,
+                  "modified": false
+                },
                 "main.min.css": {
                   "type": "-",
-                  "size": 74428,
-                  "lmtime": 1739643574391,
+                  "size": 76424,
+                  "lmtime": 1739810182555,
                   "modified": false
                 },
                 "swiper-bundle.css": {
@@ -174,8 +180,8 @@
               "html": {
                 "home.html": {
                   "type": "-",
-                  "size": 121130,
-                  "lmtime": 1739655080892.7346,
+                  "size": 124980,
+                  "lmtime": 1739809513957.7917,
                   "modified": false
                 },
                 "index.html": {
@@ -230,62 +236,62 @@
                 },
                 "slide-1.png": {
                   "type": "-",
-                  "size": 344262,
-                  "lmtime": 1739301118783.85,
+                  "size": 314643,
+                  "lmtime": 1739793575475.0151,
                   "modified": false
                 },
                 "slide-2.png": {
                   "type": "-",
-                  "size": 431775,
-                  "lmtime": 1739304752127.6016,
+                  "size": 334562,
+                  "lmtime": 1739800330137.8118,
                   "modified": false
                 },
-                "visa-1.svg": {
+                "slide-3.png": {
                   "type": "-",
-                  "size": 3703,
-                  "lmtime": 1739632870925.9707,
+                  "size": 280051,
+                  "lmtime": 1739793520112.9883,
                   "modified": false
                 },
-                "visa-2.svg": {
+                "visa-1.png": {
                   "type": "-",
-                  "size": 19568,
-                  "lmtime": 1739632777403.0378,
+                  "size": 18285,
+                  "lmtime": 1739810047626.94,
                   "modified": false
                 },
-                "visa-3.svg": {
+                "visa-3.png": {
                   "type": "-",
-                  "size": 12508,
-                  "lmtime": 1739632771046.6099,
-                  "modified": false
-                },
-                "visa-4.svg": {
-                  "type": "-",
-                  "size": 43842,
-                  "lmtime": 1739632851182.2327,
-                  "modified": false
-                },
-                "visa.png": {
-                  "type": "-",
-                  "size": 15367,
-                  "lmtime": 1739448676440.064,
+                  "size": 40435,
+                  "lmtime": 1739809886288.6326,
                   "modified": false
                 },
                 "why-1.png": {
                   "type": "-",
-                  "size": 33000,
-                  "lmtime": 1739448538503.463,
+                  "size": 21443,
+                  "lmtime": 1739809727797.4668,
                   "modified": false
                 },
                 "why-2.png": {
                   "type": "-",
-                  "size": 20292,
-                  "lmtime": 1739448416827.8909,
+                  "size": 18059,
+                  "lmtime": 1739809612535.5115,
+                  "modified": false
+                },
+                "why-3-mobile.png": {
+                  "type": "-",
+                  "size": 20934,
+                  "lmtime": 1739809508635.9067,
                   "modified": false
                 },
                 "why-3.png": {
                   "type": "-",
                   "size": 31707,
                   "lmtime": 1739448582431.5942,
+                  "modified": false
+                },
+                "visa-2.png": {
+                  "type": "-",
+                  "size": 23187,
+                  "lmtime": 1739810061792.1077,
                   "modified": false
                 }
               },
@@ -300,14 +306,14 @@
                 },
                 "main.js": {
                   "type": "-",
-                  "size": 9959,
-                  "lmtime": 1739631867088.2493,
+                  "size": 11392,
+                  "lmtime": 1739813672542.6072,
                   "modified": false
                 },
                 "main.min.js": {
                   "type": "-",
-                  "size": 5431,
-                  "lmtime": 1739631867088,
+                  "size": 6161,
+                  "lmtime": 1739813672542.999,
                   "modified": false
                 }
               },
@@ -321,44 +327,44 @@
                   },
                   "_credit.scss": {
                     "type": "-",
-                    "size": 11104,
-                    "lmtime": 1739569293667.2603,
+                    "size": 11768,
+                    "lmtime": 1739810182049.3486,
                     "modified": false
                   },
                   "_document.scss": {
                     "type": "-",
-                    "size": 3350,
-                    "lmtime": 1739569293667.3462,
+                    "size": 3679,
+                    "lmtime": 1739804552379.112,
                     "modified": false
                   },
                   "_faq.scss": {
                     "type": "-",
-                    "size": 3734,
-                    "lmtime": 1739641423607.1292,
+                    "size": 3760,
+                    "lmtime": 1739809032986.8503,
                     "modified": false
                   },
                   "_footer.scss": {
                     "type": "-",
-                    "size": 9917,
-                    "lmtime": 1739641948961.7197,
+                    "size": 10107,
+                    "lmtime": 1739809196796.8262,
                     "modified": false
                   },
                   "_header.scss": {
                     "type": "-",
-                    "size": 8223,
-                    "lmtime": 1739643573400.9387,
+                    "size": 8188,
+                    "lmtime": 1739799476824.0386,
                     "modified": false
                   },
                   "_help.scss": {
                     "type": "-",
-                    "size": 2347,
-                    "lmtime": 1739569293620.7825,
+                    "size": 2950,
+                    "lmtime": 1739808971115.3699,
                     "modified": false
                   },
                   "_hero.scss": {
                     "type": "-",
-                    "size": 14794,
-                    "lmtime": 1739632305509.8848,
+                    "size": 15142,
+                    "lmtime": 1739802188989.5815,
                     "modified": false
                   },
                   "_modal.scss": {
@@ -375,14 +381,14 @@
                   },
                   "_step.scss": {
                     "type": "-",
-                    "size": 5625,
-                    "lmtime": 1739569293620.5232,
+                    "size": 5636,
+                    "lmtime": 1739804865737.0984,
                     "modified": false
                   },
                   "_why.scss": {
                     "type": "-",
-                    "size": 3521,
-                    "lmtime": 1739632413896.9338,
+                    "size": 3601,
+                    "lmtime": 1739809660085.276,
                     "modified": false
                   }
                 },
@@ -395,8 +401,8 @@
                 "elements": {
                   "_accordion.scss": {
                     "type": "-",
-                    "size": 3197,
-                    "lmtime": 1739634594456.6257,
+                    "size": 3587,
+                    "lmtime": 1739804330116.0925,
                     "modified": false
                   },
                   "_button.scss": {
@@ -413,8 +419,8 @@
                   },
                   "_table.scss": {
                     "type": "-",
-                    "size": 1458,
-                    "lmtime": 1739478940246.205,
+                    "size": 1673,
+                    "lmtime": 1739803385984.2925,
                     "modified": false
                   }
                 },
@@ -427,8 +433,8 @@
                   },
                   "_content.scss": {
                     "type": "-",
-                    "size": 1557,
-                    "lmtime": 1739642064531.7083,
+                    "size": 1766,
+                    "lmtime": 1739803118090.757,
                     "modified": false
                   },
                   "_fonts.scss": {
@@ -485,6 +491,64 @@
               }
             }
           },
+          "blocks": {
+            "credit": {
+              "block.php": {
+                "type": "-",
+                "size": 0,
+                "lmtime": 1739811009969.4968,
+                "modified": false
+              }
+            },
+            "documents": {
+              "block.php": {
+                "type": "-",
+                "size": 0,
+                "lmtime": 1739811065119.7227,
+                "modified": false
+              }
+            },
+            "faq": {
+              "block.php": {
+                "type": "-",
+                "size": 0,
+                "lmtime": 1739811096529.264,
+                "modified": false
+              }
+            },
+            "hero": {
+              "block.php": {
+                "type": "-",
+                "size": 10430,
+                "lmtime": 1739812264981.1777,
+                "modified": false
+              }
+            },
+            "steps": {
+              "block.php": {
+                "type": "-",
+                "size": 0,
+                "lmtime": 1739811082483.8362,
+                "modified": false
+              }
+            },
+            "why": {
+              "block.php": {
+                "type": "-",
+                "size": 0,
+                "lmtime": 1739810990036.8901,
+                "modified": false
+              }
+            },
+            "help": {
+              "block.php": {
+                "type": "-",
+                "size": 0,
+                "lmtime": 1739811119783.4736,
+                "modified": false
+              }
+            }
+          },
           "footer.php": {
             "type": "-",
             "size": 42,
@@ -493,8 +557,8 @@
           },
           "functions.php": {
             "type": "-",
-            "size": 350,
-            "lmtime": 1739275378285.6155,
+            "size": 424,
+            "lmtime": 1739812609504.5266,
             "modified": false
           },
           ".gitignore": {
@@ -512,8 +576,8 @@
           "inc": {
             "acf.php": {
               "type": "-",
-              "size": 605,
-              "lmtime": 1737966832283.1067,
+              "size": 2696,
+              "lmtime": 1739811293626.2896,
               "modified": false
             },
             "admin": {
@@ -538,8 +602,8 @@
             },
             "enqueues.php": {
               "type": "-",
-              "size": 1196,
-              "lmtime": 1738848557409.1572,
+              "size": 1250,
+              "lmtime": 1739813149935.0994,
               "modified": false
             },
             "helper.php": {

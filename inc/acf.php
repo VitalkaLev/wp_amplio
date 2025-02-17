@@ -4,6 +4,73 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+function theme_allowed_blocks( $allowed_blocks ) {
+	$allowed_blocks = array(
+		'core/heading',
+		'core/paragraph',
+		'core/columns',
+		'core/html',
+		'core/image',
+        'core/list',
+		'core/list-item',
+		'core/separator',
+		'core/spacer',
+		'core/table',
+		'core/embed',
+		'core/file',
+		'core/video',
+		'core/shortcode'
+	);
+
+	$acf_blocks = acf_get_block_types();
+
+	foreach ( array_keys( $acf_blocks ) as $block_name ) :
+		$allowed_blocks[] = $block_name;
+	endforeach;
+
+	return $allowed_blocks;
+}
+add_filter( 'allowed_block_types_all', 'theme_allowed_blocks' );
+
+
+function register_acf_blocks() {
+    $blocks = [
+        'hero' => 'Hero Block',
+        'why' => ' Block',
+        'documents' => 'Documents Block',
+		'credit' => 'Credit Block',
+        'steps' => 'Steps Block',
+		'help' => 'Steps Block',
+		'faq' => 'Faq Block'
+    ];
+
+    foreach ($blocks as $block_name => $block_title) {
+        acf_register_block_type([
+            'name'              => $block_name,
+            'title'             => __($block_title, THEME),
+            'description'       => __('Custom ' . $block_title . ' with ACF fields', THEME),
+            'render_template'   => get_template_directory() . "/blocks/{$block_name}/block.php",
+            'category'          => 'formatting',
+            'icon'              => 'admin-generic',
+            'keywords'          => [$block_name, 'acf', 'custom'],
+            'mode'              => 'edit',
+            'supports'          => [
+                'align'         => true,
+                'anchor'        => true,
+                'mode'          => false,
+            ],
+            'enqueue_assets' => function() use ($block_name) {
+                $css_path = get_template_directory_uri() . "/template-parts/blocks/{$block_name}/{$block_name}.css";
+                if (file_exists(get_template_directory() . "/template-parts/blocks/{$block_name}/{$block_name}.css")) {
+                    wp_enqueue_style("{$block_name}-block-css", $css_path);
+                }
+            },
+        ]);
+    }
+}
+add_action('acf/init', 'register_acf_blocks');
+
+
 
 if( function_exists('acf_add_options_page') ) {
 

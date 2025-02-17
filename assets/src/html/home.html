@@ -118,11 +118,11 @@
             
         </header>
         <main class="main">
-            <section class="section hero animate-fade" data-delay="0.3s">
+            <section id="hero" class="section hero animate-fade" data-delay="0.3s">
                 <div class="hero__wrapper">
                     <div class="hero__content">
                         <h1 class="hero__title">
-                            Розвивайте свою справу з нами – <b>швидкі кредити для ФОП!</b>
+                            Розвивайте свою <br>справу з нами – <b>швидкі кредити для ФОП!</b>
                             <span class="hero__label">
                                 ONLINE
                             </span>
@@ -144,7 +144,12 @@
                                 </div>
                                 <div class="swiper-slide hero__slide">
                                     <div class="hero__slide__image">
-                                        <img  width="500" height="700" src="../images/slide-2.png" loading="lazy" alt="hero">
+                                        <img width="500" height="700" src="../images/slide-2.png" loading="lazy" alt="hero">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide hero__slide">
+                                    <div class="hero__slide__image">
+                                        <img  width="500" height="700" src="../images/slide-3.png" loading="lazy" alt="hero">
                                     </div>
                                 </div>
                             </div>
@@ -232,6 +237,23 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="swiper-slide hero__box__content">
+                                <div class="hero__box__quotes blue">“</div>
+                                <div class="hero__box__text">
+                                    <p>Взяв кредит на холодильну  вітрину. Тепер в кавʼярні продаю ще десерти.</p>
+                                    <p>Середній чек став більшим, прибутки зростають!</p>
+                                </div>
+                                <div class="hero__box__under">
+                                    <div class="hero__box__author">
+                                        <span class="hero__box__author-name">
+                                            Олег                        
+                                        </span>
+                                        <span class="hero__box__author-city">
+                                            м. Львів                        
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="hero__box__buttons">
                             <button class="prev">
@@ -262,17 +284,25 @@
                     <div class="why__items">
                         <div class="why__item animate-fade" data-delay="0.3s" style="background: rgba(194, 205, 242, 1);">
                             <h3>Тільки онлайн, вам нетреба нікуди їхати</h3>
-                            <img width="280" height="203" src="../images/why-1.png" loading="lazy" alt="why">
+                            <picture>
+                                <source srcset="../images/why-1-mobile.png" media="(max-width: 768px)">
+                                <img width="280" height="203" src="../images/why-1.png" loading="lazy" alt="why">
+                            </picture>
                         </div>
                         <div class="why__item animate-fade" data-delay="0.3s" style="background: rgba(211, 216, 192, 1)">
                             <h3>Нам не потрібні застава та поручителі</h3>
-                            <img width="280" height="203" src="../images/why-2.png" loading="lazy" alt="why">
-                        </div>
+                            <picture>
+                                <source srcset="../images/why-2-mobile.png" media="(max-width: 768px)">
+                                <img width="280" height="203" src="../images/why-2.png" loading="lazy" alt="why">
+                            </picture>                        </div>
                         <div class="why__item animate-fade" data-delay="0.3s" style="background: rgba(204, 231, 234, 1);">
                             <h3>
                                 Видаємо кредит <br>за <b>30 хвилин</b>
                             </h3>
-                            <img width="280" height="203" src="../images/why-3.png" loading="lazy" alt="why">
+                            <picture>
+                                <source srcset="../images/why-3-mobile.png" media="(max-width: 768px)">
+                                <img width="280" height="203" src="../images/why-3.png" loading="lazy" alt="why">
+                            </picture>
                         </div>
                     </div>
                 </div>
@@ -702,46 +732,77 @@
                   <h2>Прості способи погашення кредиту</h2>
                   <div class="help__list">
                     <div class="help__item">
-                      <h3>В особистому кабінеті Amplio</h3>
-                      <p>
-                        Ви можете погасити у Amplio Ваш кредит онлайн не виходячи з дому. Просто перейдіть в особистий кабінет
-                        та сплатіть кредит банківською картою.
-                      </p>
+                        <h3>В особистому <br>кабінеті Amplio</h3>
+                        <div class="help__item__text">
+                            <p>
+                                Ви можете погасити Ваш кредит онлайн не виходячи з дому.
+                            </p>
+                            <p>
+                                Просто перейдіть в особистий кабінет Amplio  та сплатіть кредит банківською картою
+                            </p>
+                        </div>
                         <div class="help__item__images">
                             <a href="#">
-                                <img width="200" height="50" src="../images/visa-1.svg" loading="lazy" alt="pay">
+                                <img width="300" height="60" src="../images/visa-1.png" loading="lazy" alt="pay">
                             </a>
                         </div>
                     </div>
                     <div class="help__item">
-                      <h3>Через платіжні термінали</h3>
-                      <p>
-                        Оплата кредиту в терміналі EasyPay та City24 – це швидко та зручно. Термінал Ви зможете знайти у
-                        найближчому до Вас супермаркеті.
-                      </p>
-                      <div class="help__item__images help__images-col-2">
-                        <a href="#">
-                            <img width="200" height="50" src="../images/visa-2.svg" loading="lazy" alt="pay">
-                        </a>
-                      </div>
+                        <h3>Через платіжні <br> термінали</h3>
+                        <div class="help__item__text">
+                            <p>
+                                Оплата кредиту в терміналі EasyPay та City24 – це швидко та зручно.
+                            </p>
+                            <p>
+                                Термінал Ви зможете знайти у найближчому до Вас супермаркеті.
+                            </p>
+                        </div>
+                        <div class="help__item__images">
+                            <a href="#">
+                                <img width="300" height="60" src="../images/visa-2.png" loading="lazy" alt="pay">
+                            </a>
+                        </div>
                     </div>
                     <div class="help__item">
-                      <h3>В особистому кабінеті Amplio</h3>
-                      <p>У будь-якому відділенні Нової Пошти можна оплатити готівкою через касу за номером телефону.</p>
-                      <div class="help__item__images help__images-col-2">
-                        <a href="#">
-                            <img width="200" height="50" src="../images/visa-3.svg" loading="lazy" alt="pay">
-                        </a>
-                      </div>
-                    </div>
-                    <div class="help__item">
-                      <h3>В особистому кабінеті Amplio</h3>
-                      <p>Погасити/продовжити кредит у Amplio можна в касах банків-партнерів.</p>
-                      <div class="help__item__images help__images-col-2">
-                        <a href="#">
-                            <img width="200" height="50" src="../images/visa-4.svg" loading="lazy" alt="pay">
-                        </a>
-                      </div>
+                        <h3>Через каси та інтернет сервіси Банків України</h3>
+                        <div class="help__item__text">
+                            <p>Ви можете погасити Ваш кредит в касі будь-якого банку України або через доступний інтернет-банкінг Вашого Банку. Погашення відбувається за реквізитами:</p>
+                            <div class="help__item__hide">
+                                <p>
+                                    ТОВ «1 БЕЗПЕЧНЕ АГЕНТСТВО НЕОБХІДНИХ КРЕДИТІВ»  
+                                </p>
+                                <p>
+                                    Код ЄДРПОУ:39861924
+                                </p>
+                                <p>
+                                    IBAN: UA563395000000026508558790001
+                                </p>
+                                <p>
+                                    Банк отримувача: АТ “ТАСКОМБАНК”
+                                </p>
+                                <p>
+                                    Банк отримувача: АТ “ТАСКОМБАНК”
+                                </p>
+                                <p>
+                                    В призначенні платежу вкажіть:
+                                </p>
+                                <p>
+                                    «Погашення кредиту» і ОБОВ’ЯЗКОВО вкажіть своє ПІБ, ІПН та номер кредитного договору, <br> 
+                                </p>
+                                <p>
+                                    інакше ми не зможемо ідентифікувати платіж і ваш кредит не буде погашено
+                                </p>
+                            </div>
+                            <button type="button" class="btn-help btn-collapse" id="help-read">
+                                <span class="open active">Детальніше</span>
+                                <span class="close">Згорнути</span>
+                            </button>
+                        </div>
+                        <div class="help__item__images">
+                            <a href="#">
+                                <img width="300" height="170" src="../images/visa-3.png" loading="lazy" alt="pay">
+                            </a>
+                        </div>
                     </div>
                   </div>
                 </div>
