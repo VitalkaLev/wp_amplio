@@ -84,3 +84,136 @@
     padding: 5px;
     height: 500px !important;
 }
+
+.acf-block-component .acf-field-textarea,
+.acf-block-component .acf-field-tinymce-heading-editor {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 24px;
+    padding: 20px;
+    border: 1px solid #ccd0d4;
+}
+.acf-block-component .acf-fields > .acf-tab-wrap {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccd0d4;
+}
+
+.acf-block-component .acf-block-fields{
+    padding: 20px;
+}
+
+.acf-block-component .acf-tab-group{
+    padding: 0 !important;
+}
+
+.acf-block-component .acf-field-repeater{
+    padding: 0 !important;
+    border-top: none !important;
+}
+
+.acf-block-component .acf-field-repeater .acf-field-textarea{
+    border: none !important;
+}
+
+.acf-block-component .acf-tab-wrap{
+    overflow: visible;
+}
+
+.acf_text_toolbar{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 300px;
+}
+
+
+.acf-block-component .acf-field-textarea:before ,
+.acf-block-component .acf-field-tinymce-heading-editor:before{
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 0;
+    background: #f9f9f9;
+    border-color: #e1e1e1;
+    border-style: solid;
+    border-width: 0 1px 0 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+}
+
+.acf-block-component .acf-field-textarea .acf-label {
+    float: left;
+    width: 20%;
+    margin: 0;
+}
+
+.acf-block-component .acf-field-tinymce-heading-editor .acf-label {
+    float: left;
+    width: 20%;
+    margin: 0;
+}
+
+.acf-block-component .acf-field-textarea .acf-input , 
+.acf-block-component .acf-field-tinymce-heading-editor .acf-input{
+    width: 100%;
+}
+
+
+.acfe-modal.-small.-open .acfe-modal-wrapper{
+    max-width: 40% !important;
+    max-height: 60% !important;
+}
+
+.acfe-modal.-small.-open{
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.acf-field-group{
+    border: 1px solid #e1e1e1;
+}
+
+.acf-block-component .acf-field-group .acf-label {
+    float: left;
+    width: 20%;
+    margin: 0;
+}
+
+.acf-block-component .acf-field-group .acf-input{
+    width: 100%;
+}
+
+.acf-block-component .acf-field-group:before{
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 0;
+    background: #f9f9f9;
+    border-color: #e1e1e1;
+    border-style: solid;
+    border-width: 0 1px 0 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+}
+
+.acf-input .acf-button.button {
+    background: #373737 !important;
+    color: white !important;
+    border: none !important;
+    padding: 5px 20px;
+}
+
+.acf-input .acf-button.button:hover {
+    background: #000000 !important;
+    color: white !important;
+}
+
+.acf-input {
+    padding-left: 6px;
+}

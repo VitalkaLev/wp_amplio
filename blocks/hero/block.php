@@ -1,45 +1,53 @@
 <?php
-
-
+$title = get_field('acf_hero_title');
+$label = get_field('acf_hero_label');
+$button = get_field('acf_hero_button');
+$button_text = isset($button['acf_hero_button_text']) ? $button['acf_hero_button_text'] : '';
+$button_link = isset($button['acf_hero_button_link']) ? $button['acf_hero_button_link'] : '';
+$button_icon = isset($button['acf_hero_button_icon']) ? $button['acf_hero_button_icon'] : '';
+$slides = get_field('acf_hero_slides');
+$bottom_sections = get_field('acf_hero_bottom_sections');
 ?>
 
 <section id="hero" class="section hero animate-fade" data-delay="0.3s">
     <div class="hero__wrapper">
         <div class="hero__content">
-            <h1 class="hero__title">
-                Розвивайте свою <br>справу з нами – <b>швидкі кредити для ФОП!</b>
-                <span class="hero__label">
-                    ONLINE
-                </span>
-            </h1>
-            <a href="#credit" class="btn btn-primary h-bg h-slide green">
-                <span>Розрахувати кредит</span>
-                <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4.48409 5.00008H11.1508M11.1508 11.6667V15.0001M11.1508 8.33341H11.1591M7.81742 8.33341H7.82576M4.48409 8.33341H4.49242M7.81742 11.6667H7.82576M4.48409 11.6667H4.49242M7.81742 15.0001H7.82576M4.48409 15.0001H4.49242M2.81742 1.66675H12.8174C13.7379 1.66675 14.4841 2.41294 14.4841 3.33341V16.6667C14.4841 17.5872 13.7379 18.3334 12.8174 18.3334H2.81742C1.89695 18.3334 1.15076 17.5872 1.15076 16.6667V3.33341C1.15076 2.41294 1.89695 1.66675 2.81742 1.66675Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-            </a>
+            <?php if (!empty($title)) : ?>
+                <h1 class="hero__title">
+                    <?php echo theme_text($title); ?>
+                    <?php if (!empty($label)) : ?>
+                        <span class="hero__label">
+                            <?php echo theme_text($label); ?>
+                        </span>
+                    <?php endif; ?>
+                </h1>
+            <?php endif; ?>
+            <?php if (!empty($button_text) && !empty($button_link)) : ?>
+                <a href="<?php echo esc_url($button_link); ?>" class="btn btn-primary h-bg h-slide green">
+                    <span><?php echo theme_text($button_text); ?></span>
+                    <?php if($button_icon == false){ ?>
+                        <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.48409 5.00008H11.1508M11.1508 11.6667V15.0001M11.1508 8.33341H11.1591M7.81742 8.33341H7.82576M4.48409 8.33341H4.49242M7.81742 11.6667H7.82576M4.48409 11.6667H4.49242M7.81742 15.0001H7.82576M4.48409 15.0001H4.49242M2.81742 1.66675H12.8174C13.7379 1.66675 14.4841 2.41294 14.4841 3.33341V16.6667C14.4841 17.5872 13.7379 18.3334 12.8174 18.3334H2.81742C1.89695 18.3334 1.15076 17.5872 1.15076 16.6667V3.33341C1.15076 2.41294 1.89695 1.66675 2.81742 1.66675Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    <?php } ?>
+                </a>
+            <?php endif; ?>
         </div>
-        <div class="hero__slider">
-            <div class="hero__slider-swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide hero__slide">
-                        <div class="hero__slide__image">
-                            <img width="500" height="700" src="<?php echo ASSETS; ?>/images/slide-1.png" loading="lazy" alt="hero">
-                        </div>
-                    </div>
-                    <div class="swiper-slide hero__slide">
-                        <div class="hero__slide__image">
-                            <img width="500" height="700" src="<?php echo ASSETS; ?>/images/slide-2.png" loading="lazy" alt="hero">
-                        </div>
-                    </div>
-                    <div class="swiper-slide hero__slide">
-                        <div class="hero__slide__image">
-                            <img  width="500" height="700" src="<?php echo ASSETS; ?>/images/slide-3.png" loading="lazy" alt="hero">
-                        </div>
+        <?php if (!empty($slides)) : ?>
+            <div class="hero__slider">
+                <div class="hero__slider-swiper">
+                    <div class="swiper-wrapper">
+                        <?php foreach ($slides as $slide) : ?>
+                            <div class="swiper-slide hero__slide">
+                                <div class="hero__slide__image">
+                                    <?php theme_image($slide['image_id'], 500, 700, ''); ?>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
-        </div>
+        <?php endif; ?>
         <div class="hero__decor">
             <svg class="hero__decor-line hero__decor-line-desktop" width="1280" height="473" viewBox="0 0 1280 473" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M-236 365.351C194.411 527.794 1030.37 483.31 1421 -65" stroke="#2046D2" stroke-width="49"/>
@@ -62,83 +70,45 @@
                 <rect width="1280" height="680" rx="48" fill="white"/>
                 </clipPath>
                 </defs>
-                </svg>
-                
+            </svg>
         </div>
-        <div class="hero__bottom animate-fade">
-            <div class="hero__bottom__wrapper">
-                <div class="hero__bottom-group">
-                    <div class="hero__bottom__line"></div>
-                    <span class="hero__bottom__subtitle">Сума (до)</span>
-                    <span class="hero__bottom__title">200 тис. грн.</span>
-                </div>
-                <div class="hero__bottom-group">
-                    <div class="hero__bottom__line"></div>
-                    <span class="hero__bottom__subtitle">Строк (до)</span>
-                    <span class="hero__bottom__title">36 міс.</span>
-                </div>
-                <div class="hero__bottom-group">
-                    <div class="hero__bottom__line"></div>
-                    <span class="hero__bottom__subtitle">Номінальна ставка</span>
-                    <span class="hero__bottom__title">0.01<span>%</span> <span class="small">річних</span></span>
+        <?php if (!empty($bottom_sections)) : ?>
+            <div class="hero__bottom animate-fade">
+                <div class="hero__bottom__wrapper">
+                    <?php foreach ($bottom_sections as $section) : ?>
+                        <div class="hero__bottom-group">
+                            <div class="hero__bottom__line"></div>
+                            <span class="hero__bottom__subtitle"><?php echo theme_text($section['subtitle']); ?></span>
+                            <span class="hero__bottom__title"><?php echo theme_text($section['title']); ?></span>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
-        </div>
+        <?php endif; ?>
     </div>
     <div class="hero__wrapper hero__wrapper-mobile">
         <div class="hero__box hero__box-swiper">
             <div class="swiper-wrapper hero__box__group">
-                <div class="swiper-slide hero__box__content">
-                    <div class="hero__box__quotes blue">“</div>
-                    <div class="hero__box__text">
-                        <p>Взяв кредит на холодильну  вітрину. Тепер в кавʼярні продаю ще десерти.</p>
-                        <p>Середній чек став більшим, прибутки зростають!</p>
-                    </div>
-                    <div class="hero__box__under">
-                        <div class="hero__box__author">
-                            <span class="hero__box__author-name">
-                                Дмитро                        
-                            </span>
-                            <span class="hero__box__author-city">
-                                м. Львів                        
-                            </span>
+                <?php if (!empty($slides)) : ?>
+                    <?php foreach ($slides as $text) : ?>
+                        <div class="swiper-slide hero__box__content">
+                            <div class="hero__box__quotes blue">“</div>
+                            <div class="hero__box__text">
+                                <p><?php echo theme_text($text['content']); ?></p>
+                            </div>
+                            <div class="hero__box__under">
+                                <div class="hero__box__author">
+                                    <span class="hero__box__author-name">
+                                        <?php echo theme_text($text['author_name']); ?>
+                                    </span>
+                                    <span class="hero__box__author-city">
+                                        <?php echo theme_text($text['author_city']); ?>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="swiper-slide hero__box__content">
-                    <div class="hero__box__quotes blue">“</div>
-                    <div class="hero__box__text">
-                        <p>Взяв кредит на холодильну  вітрину. Тепер в кавʼярні продаю ще десерти.</p>
-                        <p>Середній чек став більшим, прибутки зростають!</p>
-                    </div>
-                    <div class="hero__box__under">
-                        <div class="hero__box__author">
-                            <span class="hero__box__author-name">
-                                Анна                        
-                            </span>
-                            <span class="hero__box__author-city">
-                                м. Львів                        
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide hero__box__content">
-                    <div class="hero__box__quotes blue">“</div>
-                    <div class="hero__box__text">
-                        <p>Взяв кредит на холодильну  вітрину. Тепер в кавʼярні продаю ще десерти.</p>
-                        <p>Середній чек став більшим, прибутки зростають!</p>
-                    </div>
-                    <div class="hero__box__under">
-                        <div class="hero__box__author">
-                            <span class="hero__box__author-name">
-                                Олег                        
-                            </span>
-                            <span class="hero__box__author-city">
-                                м. Львів                        
-                            </span>
-                        </div>
-                    </div>
-                </div>
+                    <?php endforeach; ?>
+                <?php endif; ?>
             </div>
             <div class="hero__box__buttons">
                 <button class="prev">

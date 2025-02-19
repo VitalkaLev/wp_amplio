@@ -98,3 +98,12 @@ function theme_relationship_query( $args, $field, $post_id ) {
 add_filter('acf/fields/relationship/query', 'theme_relationship_query', 10, 3);
 
 
+function add_default_value_to_image_field($field) {
+    acf_render_field_setting( $field, array(
+      'label'      => __('Default Image','acf'),
+      'instructions'  => __('Appears when creating a new post','acf'),
+      'type'      => 'image',
+      'name'      => 'default_value',
+    ));
+}
+add_action('acf/render_field_settings/type=image', 'add_default_value_to_image_field', 20);

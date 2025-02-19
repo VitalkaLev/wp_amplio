@@ -106,6 +106,11 @@ function headerMenu() {
 }
 
 function heroSwiper() {
+  const label = document.querySelector('.hero__label');
+  const title = document.querySelector('.hero__title h1');
+  if (label && title) {
+    title.appendChild(label);
+  }
   if (document.querySelector('.hero__slider-swiper')) {
 
     const imageswiper = new Swiper('.hero__slider-swiper', {

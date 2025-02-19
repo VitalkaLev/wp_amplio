@@ -92,7 +92,7 @@
             height: 100%;
             position: absolute;
             left: 50%;
-            top: 0;
+            top: -50px;
             z-index: 1;
             svg{
                 width: 100%;
@@ -239,8 +239,8 @@
                 width: 60px;
                 height: 100%;
                 position: absolute;
-                left: 5px;
-                top: 60px;
+                left: 3px;
+                top: 50px;
                 z-index: 1;
                 transform: rotate(90deg);
             }

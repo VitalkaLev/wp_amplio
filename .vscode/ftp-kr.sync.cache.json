@@ -103,7 +103,7 @@
                 "main.min.css": {
                   "type": "-",
                   "size": 76424,
-                  "lmtime": 1739810182555,
+                  "lmtime": 1739815994657.999,
                   "modified": false
                 },
                 "swiper-bundle.css": {
@@ -180,8 +180,8 @@
               "html": {
                 "home.html": {
                   "type": "-",
-                  "size": 124980,
-                  "lmtime": 1739809513957.7917,
+                  "size": 125188,
+                  "lmtime": 1739816042594.047,
                   "modified": false
                 },
                 "index.html": {
@@ -258,10 +258,22 @@
                   "lmtime": 1739810047626.94,
                   "modified": false
                 },
+                "visa-2.png": {
+                  "type": "-",
+                  "size": 23187,
+                  "lmtime": 1739810061792.1077,
+                  "modified": false
+                },
                 "visa-3.png": {
                   "type": "-",
                   "size": 40435,
                   "lmtime": 1739809886288.6326,
+                  "modified": false
+                },
+                "why-1-mobile.png": {
+                  "type": "-",
+                  "size": 21443,
+                  "lmtime": 1739816160613.5225,
                   "modified": false
                 },
                 "why-1.png": {
@@ -288,10 +300,10 @@
                   "lmtime": 1739448582431.5942,
                   "modified": false
                 },
-                "visa-2.png": {
+                "why-2-mobile.png": {
                   "type": "-",
-                  "size": 23187,
-                  "lmtime": 1739810061792.1077,
+                  "size": 18059,
+                  "lmtime": 1739816233091.907,
                   "modified": false
                 }
               },
