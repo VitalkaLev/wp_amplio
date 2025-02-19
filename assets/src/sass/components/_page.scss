@@ -1,7 +1,10 @@
 .page{
-    h1{
-        margin-bottom: 25px;
+    &__content{
+        h1{
+            margin-bottom: 25px;
+        }
     }
+    
     &__wrapper{
         margin-top: 70px;
         min-height: 50vh;

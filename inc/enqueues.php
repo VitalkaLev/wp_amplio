@@ -8,8 +8,8 @@ function theme_register_styles() {
     wp_enqueue_style('swiper', ASSETS . '/css/swiper-bundle.css', array(), _S_VERSION );
     wp_enqueue_style('fancy', ASSETS . '/css/fancy.min.css', array(), _S_VERSION );
 
-    wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11.1.0/swiper-bundle.min.js', array(), false, true );
-    wp_enqueue_script('fancy', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js', array(), false, true );
+    wp_enqueue_script('swiper', ASSETS . '/js/libs/swiper.min.js', array(), false, true );
+    wp_enqueue_script('fancy', ASSETS . '/js/libs/fancy.min.js', array(), false, true );
 
     wp_enqueue_style('main', PATH_URL . '/assets/src/css/main.min.css', array(), _S_VERSION );
 	wp_enqueue_script('main', PATH_URL . '/assets/src/js/main.js', array(), _S_VERSION, true );

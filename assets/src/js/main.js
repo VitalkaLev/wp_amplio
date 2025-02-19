@@ -19,15 +19,33 @@ function tabs() {
   });
 }
 
-function lazyLoad(){
-  // const images = document.querySelectorAll("img[loading='lazy']");
-    
-  // images.forEach(img => {
-  //     img.classList.add("blurred");
-  //     img.addEventListener("load", () => {
-  //         img.classList.remove("blurred");
-  //     });
-  // });
+function headerFixed(){
+  const header = document.querySelector(".header");
+  const links = document.querySelectorAll("a[href^='#']");
+  document.addEventListener("scroll", function () {
+    if (window.scrollY > 20) {
+      header.classList.add("header-fixed");
+    } else {
+      header.classList.remove("header-fixed");
+    }
+  });
+   
+  links.forEach(link => {
+      link.addEventListener("click", function (event) {
+          event.preventDefault();
+          const targetId = this.getAttribute("href").substring(1);
+          const targetElement = document.getElementById(targetId);
+            const extraOffset = window.innerWidth <= 768 ? 60 : 120;
+
+          if (targetElement) {
+            window.scrollTo({
+                  top: targetElement.getBoundingClientRect().top + window.scrollY - extraOffset,
+                  behavior: "smooth"
+            });
+          }
+      });
+  });
+ 
 }
 
 function funcyboxInit() {
@@ -105,6 +123,19 @@ function headerMenu() {
 
 }
 
+function headerMobile(){
+  const header = document.querySelector('.header-mobile .header__nav');
+
+  header.addEventListener('click', function () {
+    document.querySelector('.header__button-menu').classList.remove('active')
+    document.querySelector('.header__button-menu .open').classList.add('active');
+    document.querySelector('.header__button-menu .close').classList.remove('active');
+    document.querySelector('.header__dropdown').classList.remove('active');
+    document.querySelector('.header__actions').classList.remove('active');
+    document.querySelector('.header__wrapper').classList.remove('active');
+  });
+}
+
 function heroSwiper() {
   const label = document.querySelector('.hero__label');
   const title = document.querySelector('.hero__title h1');
@@ -118,6 +149,7 @@ function heroSwiper() {
       loop: true,
       autoplay: {
         delay: 3000,
+        reverseDirection: false,
       },
       speed: 1000,
       effect: "slide",
@@ -133,6 +165,7 @@ function heroSwiper() {
       loop: true,
       autoplay: {
         delay: 3000,
+        reverseDirection: false,
       },
       slidesPerView: 1,
       speed: 1000,
@@ -140,13 +173,13 @@ function heroSwiper() {
     });
 
     // Синхронізація при автоматичному переході
-    imageswiper.on('slideChangeTransitionStart', function () {
-      textSwiper.slideToLoop(imageswiper.realIndex);
-    });
+    // imageswiper.on('slideChangeTransitionStart', function () {
+    //   textSwiper.slideToLoop(imageswiper.realIndex);
+    // });
 
-    textSwiper.on('slideChangeTransitionStart', function () {
-      imageswiper.slideToLoop(textSwiper.realIndex);
-    });
+    // textSwiper.on('slideChangeTransitionStart', function () {
+    //   imageswiper.slideToLoop(textSwiper.realIndex);
+    // });
 
     // Синхронізація при кліках на стрілки
     document.querySelector('.next').addEventListener('click', function () {
@@ -330,7 +363,8 @@ function helperCollapse() {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  lazyLoad();
+  headerFixed();
+  headerMobile();
   fadeInSections();
   headerMenu();
   heroSwiper();

@@ -7,8 +7,10 @@ $button_link = isset($button['acf_hero_button_link']) ? $button['acf_hero_button
 $button_icon = isset($button['acf_hero_button_icon']) ? $button['acf_hero_button_icon'] : '';
 $slides = get_field('acf_hero_slides');
 $bottom_sections = get_field('acf_hero_bottom_sections');
-?>
 
+if( isset( $block['data']['preview_image_help'] )) {
+    echo '<img src="'. $block['data']['preview_image_help'] .'" style="width:100%; height:auto; display: block; margin: 0 auto;">';
+} else {?>
 <section id="hero" class="section hero animate-fade" data-delay="0.3s">
     <div class="hero__wrapper">
         <div class="hero__content">
@@ -127,3 +129,4 @@ $bottom_sections = get_field('acf_hero_bottom_sections');
         </div>
     </div>
 </section>
+<?php }

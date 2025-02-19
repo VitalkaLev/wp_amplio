@@ -19,12 +19,6 @@
     cursor: pointer;
     transition: 0.5s;
 }
-
-.acf-block-preview:hover {
-    background: #3858e961;
-    transition: 0.5s;
-}
-
 .acf-gallery-sort {
     display: none !important;
 }
@@ -39,7 +33,7 @@
     object-fit: contain;
 }
 
-.wp-block-post-content .acf-block-preview img {
+.wp-block-post-content .acf-block-preview > img {
     width: 140px;
     height: auto;
     object-fit: contain;
@@ -85,135 +79,244 @@
     height: 500px !important;
 }
 
-.acf-block-component .acf-field-textarea,
-.acf-block-component .acf-field-tinymce-heading-editor {
+.editor-styles-wrapper .acf-block-component .acf-field-textarea,
+.editor-styles-wrapper .acf-block-component .acf-field-tinymce-heading-editor {
     display: flex;
     align-items: center;
     width: 100%;
     gap: 24px;
     padding: 20px;
-    border: 1px solid #ccd0d4;
-}
-.acf-block-component .acf-fields > .acf-tab-wrap {
-    margin-bottom: 30px;
-    border-bottom: 1px solid #ccd0d4;
 }
 
-.acf-block-component .acf-block-fields{
+.editor-styles-wrapper .acf-block-component .acf-fields > .acf-tab-wrap {
+    margin-bottom: 30px;
+}
+
+.editor-styles-wrapper .acf-block-component .acf-block-fields {
     padding: 20px;
 }
 
-.acf-block-component .acf-tab-group{
+.editor-styles-wrapper .acf-block-component .acf-tab-group {
     padding: 0 !important;
 }
 
-.acf-block-component .acf-field-repeater{
+.editor-styles-wrapper .acf-block-component .acf-field-repeater {
     padding: 0 !important;
     border-top: none !important;
 }
 
-.acf-block-component .acf-field-repeater .acf-field-textarea{
+.editor-styles-wrapper .acf-block-component .acf-field-repeater .acf-field-textarea {
     border: none !important;
 }
 
-.acf-block-component .acf-tab-wrap{
+.editor-styles-wrapper .acf-block-component .acf-tab-wrap {
     overflow: visible;
 }
 
-.acf_text_toolbar{
+.editor-styles-wrapper .acf_text_toolbar {
     display: flex;
     align-items: center;
     gap: 10px;
     max-width: 300px;
 }
 
-
-.acf-block-component .acf-field-textarea:before ,
-.acf-block-component .acf-field-tinymce-heading-editor:before{
+.editor-styles-wrapper .acf-block-component .acf-field-textarea:before,
+.editor-styles-wrapper .acf-block-component .acf-field-tinymce-heading-editor:before,
+.editor-styles-wrapper .acf-block-component .acf-field-group:before {
     content: "";
     display: block;
     position: absolute;
     z-index: 0;
     background: #f9f9f9;
-    border-color: #e1e1e1;
-    border-style: solid;
-    border-width: 0 1px 0 0;
+    border-right: 1px solid #ccd0d4;
     top: 0;
     bottom: 0;
     left: 0;
-    width: 20%;
+    width: 256px;
 }
 
-.acf-block-component .acf-field-textarea .acf-label {
+.editor-styles-wrapper .acf-block-component .acf-field-textarea .acf-label,
+.editor-styles-wrapper .acf-block-component .acf-field-tinymce-heading-editor .acf-label,
+.editor-styles-wrapper .acf-block-component .acf-field-group .acf-label {
     float: left;
-    width: 20%;
+    width: 256px;
     margin: 0;
 }
 
-.acf-block-component .acf-field-tinymce-heading-editor .acf-label {
-    float: left;
-    width: 20%;
-    margin: 0;
-}
-
-.acf-block-component .acf-field-textarea .acf-input , 
-.acf-block-component .acf-field-tinymce-heading-editor .acf-input{
+.editor-styles-wrapper .acf-block-component .acf-field-textarea .acf-input,
+.editor-styles-wrapper .acf-block-component .acf-field-tinymce-heading-editor .acf-input,
+.editor-styles-wrapper .acf-block-component .acf-field-group .acf-input {
     width: 100%;
 }
 
-
-.acfe-modal.-small.-open .acfe-modal-wrapper{
+.editor-styles-wrapper .acfe-modal.-small.-open .acfe-modal-wrapper {
     max-width: 40% !important;
     max-height: 60% !important;
 }
 
-.acfe-modal.-small.-open{
+.editor-styles-wrapper .acfe-modal.-small.-open {
     display: flex;
     align-items: center !important;
     justify-content: center !important;
 }
 
-.acf-field-group{
-    border: 1px solid #e1e1e1;
+.editor-styles-wrapper .acfe-modal.-small.-open .acf-field .acf-input {
+    padding-left: 0;
 }
 
-.acf-block-component .acf-field-group .acf-label {
-    float: left;
-    width: 20%;
-    margin: 0;
-}
-
-.acf-block-component .acf-field-group .acf-input{
-    width: 100%;
-}
-
-.acf-block-component .acf-field-group:before{
-    content: "";
-    display: block;
-    position: absolute;
-    z-index: 0;
-    background: #f9f9f9;
-    border-color: #e1e1e1;
-    border-style: solid;
-    border-width: 0 1px 0 0;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 20%;
-}
-
-.acf-input .acf-button.button {
+.editor-styles-wrapper .acf-input .acf-button.button {
     background: #373737 !important;
     color: white !important;
     border: none !important;
     padding: 5px 20px;
 }
 
-.acf-input .acf-button.button:hover {
+.editor-styles-wrapper .acf-input .acf-button.button:hover {
     background: #000000 !important;
     color: white !important;
 }
 
-.acf-input {
+.editor-styles-wrapper .acf-input {
     padding-left: 6px;
+}
+
+.editor-styles-wrapper .acf-field-repeater .acf-field-tinymce-heading-editor {
+    border-left: none !important;
+}
+
+.editor-styles-wrapper .mce-toolbar-grp > div {
+    background: #373737;
+}
+
+.editor-styles-wrapper .mce-toolbar .mce-ico {
+    color: #a5a5a5;
+}
+
+.editor-styles-wrapper .acf-fields > .acf-tab-wrap .acf-tab-group li a {
+    border: none !important;
+    background: none !important;
+}
+
+.editor-styles-wrapper .acf-tab-group li {
+    margin: 0 !important;
+    min-width: 256px;
+    text-align: center;
+}
+
+.editor-styles-wrapper .acf-tab-group li.active {
+    background: #e3e8ff;
+    border-bottom: 2px solid #3858e9;
+    position: relative;
+    top: 1px;
+
+}
+
+.editor-styles-wrapper .acf-block-component .acf-fields > .acf-tab-wrap {
+    background: none !important;
+    border: none !important;
+}
+
+.editor-styles-wrapper .acf-tab-group li a {
+    padding: 15px 30px !important;
+}
+
+.editor-styles-wrapper .acf-field {
+    border: 1px solid #ccd0d4 !important;
+}
+
+.editor-styles-wrapper .acf-field-repeater .acf-input {
+    padding-left: 0px;
+}
+
+.editor-styles-wrapper .acf-image-uploader {
+    margin-left: 15px;
+}
+
+.editor-styles-wrapper .acf-field-repeater {
+    border: none !important;
+}
+
+.editor-styles-wrapper .acf-field-repeater .acf-field {
+    border: none !important;
+}
+
+.editor-styles-wrapper .acfe-field-group-layout-block {
+    border-top: none !important;
+}
+
+.editor-styles-wrapper .acf-field.acf-field-tinymce-heading-editor {
+    border-bottom: none !important;
+}
+
+.editor-styles-wrapper .wp-block-post-title {
+    word-break: break-word;
+    background: white;
+    padding: 20px;
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+
+.editor-styles-wrapper .acf-block-component .acf-field-textarea .acf-input,
+.editor-styles-wrapper .acf-block-component .acf-field-tinymce-heading-editor .acf-input {
+    width: 80%;
+}
+
+.editor-styles-wrapper .acf-field textarea {
+    background: white;
+    border: 1px solid gainsboro;
+    padding: 10px;
+}
+
+.editor-styles-wrapper .acf-button.button {
+    margin-left: 20px;
+}
+
+.block-editor-block-inspector .acf-tab-group li a {
+    padding: 5px 10px;
+}
+
+.block-editor-block-inspector .acf-field {
+    display: inherit;
+}
+
+.tinymce-editor-field {
+    pointer-events: auto !important;
+    opacity: 1 !important;
+}
+
+.block-editor-block-types-list__list-item {
+    width: 100%;
+    border: 1px solid #efeeee;
+    margin-bottom: 10px;
+}
+
+
+.block-editor-block-inspector .acf-tab-group li a{
+    font-size: 12px;
+}
+
+.block-editor-block-inspector .acf-tab-group li {
+    min-width: 160px;
+    text-align: center;
+}
+.block-editor-block-inspector .acf-tab-group {
+    overflow-x: auto;
+    display: flex;
+}
+
+.block-editor-block-inspector .acf-tab-group::-webkit-scrollbar {
+    height: 6px;
+    background: #000;
+}
+
+
+.block-editor-block-inspector .acf-tab-group::-webkit-scrollbar-thumb {
+    background: #f5f5f5;
+    border-radius: 6px;
+}
+
+.block-editor-block-inspector .acf-tab-group::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #595959;
+    box-shadow: inset 0 0 5px #595959;
+    border-radius: 6px;
 }
