@@ -53,7 +53,7 @@ if( isset( $block['data']['preview_image_help'] )) {
         <div class="hero__decor">
             <svg class="hero__decor-line hero__decor-line-desktop" width="1280" height="473" viewBox="0 0 1280 473" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M-236 365.351C194.411 527.794 1030.37 483.31 1421 -65" stroke="#2046D2" stroke-width="49"/>
-            </svg>
+            </svg>  
             <svg class="hero__decor-line hero__decor-line-mobile" width="355" height="535" viewBox="0 0 355 535" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M-71 503C83 544.5 391 502 391 0" stroke="#2046D2" stroke-width="49"/>
             </svg>
@@ -66,6 +66,7 @@ if( isset( $block['data']['preview_image_help'] )) {
                 </g>
                 <defs>
                 <linearGradient id="paint0_linear_481_195" x1="336.913" y1="131.791" x2="592.5" y2="693.5" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#2046D2"/>
                 <stop offset="1" stop-color="white"/>
                 </linearGradient>
                 <clipPath id="clip0_481_195">

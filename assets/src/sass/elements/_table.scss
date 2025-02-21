@@ -26,23 +26,26 @@
         max-width: 300px;
     }
     &__item-title{
-        font-size: 1.125rem;
-        line-height: 100%;
-        font-weight: 400;
-        color: #69696D;
-        letter-spacing: -0.04em;
+        span{
+            font-size: 1.125rem;
+            line-height: 100%;
+            font-weight: 400;
+            color: #69696D;
+        }
     }
     &__item-value{
-        color: #000000;
-        letter-spacing: -0.04em;
-        p{
+        span{
             font-size: 1.75rem;
+            color: #000000;
             line-height: 100%;
             font-weight: 400;
         }
-        b{
+        sub{
             font-size: 1rem;
             line-height: 100%;
+            color: #000000;
+            position: relative;
+            bottom: 10px;
         }
     }
 }

@@ -102,8 +102,8 @@
                 },
                 "main.min.css": {
                   "type": "-",
-                  "size": 76424,
-                  "lmtime": 1739815994657.999,
+                  "size": 77285,
+                  "lmtime": 1739985017871.999,
                   "modified": false
                 },
                 "swiper-bundle.css": {
@@ -180,8 +180,8 @@
               "html": {
                 "home.html": {
                   "type": "-",
-                  "size": 125188,
-                  "lmtime": 1739816042594.047,
+                  "size": 125213,
+                  "lmtime": 1739974957018.167,
                   "modified": false
                 },
                 "index.html": {
@@ -240,12 +240,6 @@
                   "lmtime": 1739793575475.0151,
                   "modified": false
                 },
-                "slide-2.png": {
-                  "type": "-",
-                  "size": 334562,
-                  "lmtime": 1739800330137.8118,
-                  "modified": false
-                },
                 "slide-3.png": {
                   "type": "-",
                   "size": 280051,
@@ -282,6 +276,12 @@
                   "lmtime": 1739809727797.4668,
                   "modified": false
                 },
+                "why-2-mobile.png": {
+                  "type": "-",
+                  "size": 18059,
+                  "lmtime": 1739816233091.907,
+                  "modified": false
+                },
                 "why-2.png": {
                   "type": "-",
                   "size": 18059,
@@ -300,15 +300,21 @@
                   "lmtime": 1739448582431.5942,
                   "modified": false
                 },
-                "why-2-mobile.png": {
+                "slide-2.png": {
                   "type": "-",
-                  "size": 18059,
-                  "lmtime": 1739816233091.907,
+                  "size": 92170,
+                  "lmtime": 1739895670077.5488,
                   "modified": false
                 }
               },
               "js": {
                 "libs": {
+                  "fancybox.min.js": {
+                    "type": "-",
+                    "size": 142360,
+                    "lmtime": 1739952027875.6309,
+                    "modified": false
+                  },
                   "swiper.min.js": {
                     "type": "-",
                     "size": 173067,
@@ -318,14 +324,14 @@
                 },
                 "main.js": {
                   "type": "-",
-                  "size": 11392,
-                  "lmtime": 1739813672542.6072,
+                  "size": 12958,
+                  "lmtime": 1739977080873.079,
                   "modified": false
                 },
                 "main.min.js": {
                   "type": "-",
-                  "size": 6161,
-                  "lmtime": 1739813672542.999,
+                  "size": 7244,
+                  "lmtime": 1739977080872.999,
                   "modified": false
                 }
               },
@@ -339,44 +345,44 @@
                   },
                   "_credit.scss": {
                     "type": "-",
-                    "size": 11768,
-                    "lmtime": 1739810182049.3486,
+                    "size": 11801,
+                    "lmtime": 1739896093664.1929,
                     "modified": false
                   },
                   "_document.scss": {
                     "type": "-",
-                    "size": 3679,
-                    "lmtime": 1739804552379.112,
+                    "size": 3676,
+                    "lmtime": 1739984928255.6482,
                     "modified": false
                   },
                   "_faq.scss": {
                     "type": "-",
-                    "size": 3760,
-                    "lmtime": 1739809032986.8503,
+                    "size": 3768,
+                    "lmtime": 1739976970591.604,
                     "modified": false
                   },
                   "_footer.scss": {
                     "type": "-",
-                    "size": 10107,
-                    "lmtime": 1739809196796.8262,
+                    "size": 10376,
+                    "lmtime": 1739985016935.4832,
                     "modified": false
                   },
                   "_header.scss": {
                     "type": "-",
-                    "size": 8188,
-                    "lmtime": 1739799476824.0386,
+                    "size": 8716,
+                    "lmtime": 1739984714448.2656,
                     "modified": false
                   },
                   "_help.scss": {
                     "type": "-",
-                    "size": 2950,
-                    "lmtime": 1739808971115.3699,
+                    "size": 2976,
+                    "lmtime": 1739976994113.944,
                     "modified": false
                   },
                   "_hero.scss": {
                     "type": "-",
-                    "size": 15142,
-                    "lmtime": 1739802188989.5815,
+                    "size": 15262,
+                    "lmtime": 1739974661236.945,
                     "modified": false
                   },
                   "_modal.scss": {
@@ -387,14 +393,14 @@
                   },
                   "_page.scss": {
                     "type": "-",
-                    "size": 125,
-                    "lmtime": 1738098311553.359,
+                    "size": 164,
+                    "lmtime": 1739956044510.1958,
                     "modified": false
                   },
                   "_step.scss": {
                     "type": "-",
-                    "size": 5636,
-                    "lmtime": 1739804865737.0984,
+                    "size": 5640,
+                    "lmtime": 1739895961293.2285,
                     "modified": false
                   },
                   "_why.scss": {
@@ -507,64 +513,76 @@
             "credit": {
               "block.php": {
                 "type": "-",
-                "size": 0,
-                "lmtime": 1739811009969.4968,
+                "size": 13165,
+                "lmtime": 1739871066272.6162,
                 "modified": false
               }
             },
             "documents": {
               "block.php": {
                 "type": "-",
-                "size": 0,
-                "lmtime": 1739811065119.7227,
+                "size": 18927,
+                "lmtime": 1739870938241.4585,
                 "modified": false
               }
             },
             "faq": {
               "block.php": {
                 "type": "-",
-                "size": 0,
-                "lmtime": 1739811096529.264,
+                "size": 2971,
+                "lmtime": 1739874308969.861,
                 "modified": false
               }
             },
             "hero": {
               "block.php": {
                 "type": "-",
-                "size": 10430,
-                "lmtime": 1739812264981.1777,
+                "size": 8844,
+                "lmtime": 1739982599506.6978,
+                "modified": false
+              },
+              "preview.png": {
+                "type": "-",
+                "size": 51021,
+                "lmtime": 1739982481816.5789,
                 "modified": false
               }
             },
             "steps": {
               "block.php": {
                 "type": "-",
-                "size": 0,
-                "lmtime": 1739811082483.8362,
+                "size": 5008,
+                "lmtime": 1739870995720.0051,
                 "modified": false
               }
             },
             "why": {
               "block.php": {
                 "type": "-",
-                "size": 0,
-                "lmtime": 1739810990036.8901,
+                "size": 2056,
+                "lmtime": 1739870879716.7932,
                 "modified": false
               }
             },
             "help": {
               "block.php": {
                 "type": "-",
-                "size": 0,
-                "lmtime": 1739811119783.4736,
+                "size": 2680,
+                "lmtime": 1739874468376.5403,
                 "modified": false
               }
             }
           },
           "footer.php": {
             "type": "-",
-            "size": 42,
-            "lmtime": 1739275342004.9824,
+            "size": 13204,
+            "lmtime": 1739871397374.8052,
+            "modified": false
+          },
+          "front-page.php": {
+            "type": "-",
+            "size": 103,
+            "lmtime": 1739871285760.4268,
             "modified": false
           },
           "functions.php": {
@@ -581,28 +599,46 @@
           },
           "header.php": {
             "type": "-",
-            "size": 286,
-            "lmtime": 1739275323714.611,
+            "size": 40930,
+            "lmtime": 1739871476885.153,
             "modified": false
           },
           "inc": {
             "acf.php": {
               "type": "-",
-              "size": 2696,
-              "lmtime": 1739811293626.2896,
+              "size": 5147,
+              "lmtime": 1739982369794.1611,
               "modified": false
             },
             "admin": {
               "admin-theme.css": {
                 "type": "-",
-                "size": 1626,
-                "lmtime": 1738701397448.3445,
+                "size": 7335,
+                "lmtime": 1739985843800.4578,
                 "modified": false
               },
               "admin-theme.js": {
                 "type": "-",
-                "size": 0,
-                "lmtime": 1737878856456.7969,
+                "size": 75,
+                "lmtime": 1739883797619.2427,
+                "modified": false
+              },
+              "blocks.css": {
+                "type": "-",
+                "size": 962,
+                "lmtime": 1739965390533.6711,
+                "modified": false
+              },
+              "blocks.js": {
+                "type": "-",
+                "size": 2586,
+                "lmtime": 1739977680173.9553,
+                "modified": false
+              },
+              "tinymce.css": {
+                "type": "-",
+                "size": 66,
+                "lmtime": 1739900992231.4111,
                 "modified": false
               }
             },
@@ -614,14 +650,14 @@
             },
             "enqueues.php": {
               "type": "-",
-              "size": 1250,
-              "lmtime": 1739813149935.0994,
+              "size": 1172,
+              "lmtime": 1739952054209.7969,
               "modified": false
             },
             "helper.php": {
               "type": "-",
-              "size": 3931,
-              "lmtime": 1739217811180.5706,
+              "size": 1777,
+              "lmtime": 1739871467503.1895,
               "modified": false
             },
             "setup.php": {
@@ -631,16 +667,10 @@
               "modified": false
             }
           },
-          "index.php": {
-            "type": "-",
-            "size": 286,
-            "lmtime": 1739275231605.7542,
-            "modified": false
-          },
           "page.php": {
             "type": "-",
-            "size": 233,
-            "lmtime": 1739634197835.1895,
+            "size": 225,
+            "lmtime": 1739871254257.3782,
             "modified": false
           },
           "screenshot.png": {
