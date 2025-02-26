@@ -44,7 +44,7 @@ if (isset($block['data']['preview_image_help'])) {
                                     <?php foreach ($document_two_items as $item) : ?>
                                         <div class="table__row">
                                             <div class="table__item table__item-title">
-                                                <span><?php echo theme_text($item['title']); ?></span>
+                                                <span><?php echo esc_html($item['title']); ?></span>
                                             </div>
                                             <div class="table__item table__item-value">
                                                 <span><?php echo theme_text($item['value']); ?></span>
@@ -92,7 +92,7 @@ if (isset($block['data']['preview_image_help'])) {
                                                     foreach ($documents as $item) {
                                                         $pdf = get_field('acf_document_pdf',$item);
                                                         ?>
-                                                        <div class="accordion__content__item" <?php if( !empty($pdf) ){ ?> data-fancybox data-type="iframe" data-src="<?php echo esc_url($pdf); ?>" <?php } ?>>
+                                                        <div class="accordion__content__item" <?php if( !empty($pdf) ){ ?> data-fancybox data-type="iframe" data-src="<?php echo esc_url($pdf); ?>/preview" <?php } ?>>
                                                             <svg width="28" height="33" viewBox="0 0 28 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                 <path d="M18 11.2684H26.72C26.2545 10.0349 25.5313 8.9149 24.5987 7.98309L19.9534 3.33509C19.0204 2.40353 17.9001 1.68084 16.6667 1.21509V9.93509C16.6667 10.6714 17.2636 11.2684 18 11.2684Z" fill="#EBEEFA"/>
                                                                 <path d="M27.3013 13.935H18C15.7909 13.935 14 12.1441 14 9.935V0.633685C13.7853 0.618997 13.5707 0.601685 13.3533 0.601685H7.33331C3.65325 0.606122 0.671062 3.58831 0.666687 7.26837V25.9351C0.671062 29.6151 3.65325 32.5973 7.33331 32.6017H20.6666C24.3467 32.5973 27.3289 29.6151 27.3333 25.935V14.5817C27.3333 14.3644 27.316 14.1497 27.3013 13.935Z" fill="#EBEEFA"/>
@@ -101,7 +101,7 @@ if (isset($block['data']['preview_image_help'])) {
                                                                 <p><?php echo theme_text(get_the_title($item)); ?></p>
                                                             </div>
                                                         </div>
-                                                    <?php }
+                                                    <?php } wp_reset_postdata();
                                                 } 
                                                 ?>
                                             </div>
@@ -127,7 +127,7 @@ if (isset($block['data']['preview_image_help'])) {
                 </div>
                 <?php if (!empty($button)) : ?>
                     <a href="<?php echo esc_url($button_link); ?>" class="btn btn-primary h-bg green">
-                        <span><?php echo theme_text($button_text); ?></span>
+                        <span><?php echo esc_html($button_text); ?></span>
                         <?php if($button_icon == false){ ?>
                             <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4.48409 5.00008H11.1508M11.1508 11.6667V15.0001M11.1508 8.33341H11.1591M7.81742 8.33341H7.82576M4.48409 8.33341H4.49242M7.81742 11.6667H7.82576M4.48409 11.6667H4.49242M7.81742 15.0001H7.82576M4.48409 15.0001H4.49242M2.81742 1.66675H12.8174C13.7379 1.66675 14.4841 2.41294 14.4841 3.33341V16.6667C14.4841 17.5872 13.7379 18.3334 12.8174 18.3334H2.81742C1.89695 18.3334 1.15076 17.5872 1.15076 16.6667V3.33341C1.15076 2.41294 1.89695 1.66675 2.81742 1.66675Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>

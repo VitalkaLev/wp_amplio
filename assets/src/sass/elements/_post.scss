@@ -1,0 +1,56 @@
+.post{
+    &__category{
+        color: #35336E;
+        font-size: 16px;
+        line-height: 100%;
+        font-weight: 400;
+        background-color: #EDF0FA;
+        padding: 6px 12px;
+        border-radius: 20px;
+    }
+    &__group{
+        display: flex;
+        align-items: center;
+        margin-top: 40px;
+        gap: 40px;
+    }
+    &__group-bottom{
+        margin-top: 80px;
+        border-top: 1px solid #DBDBDB;
+        padding: 40px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .post__part{
+            gap: 20px;
+        }
+        .post__date{
+            color: #757575;
+            font-weight: 300;
+            font-size: 14px;
+        }
+        .post__share{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            span{
+                line-height: 100%;
+            }
+            &__item {
+                height: 100%;
+                display: flex;
+            }
+        }
+        .post__view{
+            path{
+                fill: #757575;
+                stroke: white;
+            }
+        }
+    }
+    &__view{
+        gap: 10px;
+        display: flex;
+        align-items: center;
+    }
+}

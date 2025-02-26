@@ -11,6 +11,8 @@ define('ASSETS', esc_url( get_template_directory_uri()) . '/assets/src');
 define('THEME', 'amplio-theme');
 
 require PATH . '/inc/setup.php';
+require PATH . '/inc/cleanup.php';
 require PATH . '/inc/enqueues.php';
 require PATH . '/inc/acf.php';
 require PATH . '/inc/helper.php';
+

@@ -113,18 +113,7 @@ function add_default_value_to_image_field($field) {
 }
 add_action('acf/render_field_settings/type=image', 'add_default_value_to_image_field', 20);
 
-function theme_gutenberg_styles() {
-    wp_enqueue_style('swiper', ASSETS . '/css/swiper-bundle.css', array(), _S_VERSION );
-    wp_enqueue_style('main', PATH_URL . '/assets/src/css/main.min.css', array(), _S_VERSION );
-    wp_enqueue_style('blocks', PATH_URL . '/inc/admin/blocks.css', array(), _S_VERSION );
-}
-add_action('enqueue_block_editor_assets', 'theme_gutenberg_styles');
 
-function theme_gutenberg_js() {
-    wp_enqueue_script('swiper', ASSETS . '/js/libs/swiper.min.js', array(), false, true );
-    wp_enqueue_script('blocks', PATH_URL . '/inc/admin/blocks.js', array(), _S_VERSION, true );
-}
-add_action( 'enqueue_block_editor_assets', 'theme_gutenberg_js' );
 
 
 function theme_preview_image($is_preview,$block){ 

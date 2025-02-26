@@ -8,17 +8,19 @@
 }
 
 .acf-block-preview {
-    background: #fafafa;
-    padding: 20px;
+    background: #f8f9fc;
+    padding: 0 20px;
     min-height: 50px !important;
-    color: black;
-    font-size: 16px;
-    text-align: center;
-    border: 1px solid #c1c1c1;
-    line-height: 50px;
     cursor: pointer;
     transition: 0.5s;
+    margin-bottom: 30px;
+    border: none !important;
 }
+
+.acf-block-body > .acf-block-fields{
+    border: none !important;
+}
+
 .acf-gallery-sort {
     display: none !important;
 }
@@ -33,7 +35,7 @@
     object-fit: contain;
 }
 
-.wp-block-post-content .acf-block-preview > img {
+.wp-block-post-content .acf-block-preview>img {
     width: 140px;
     height: auto;
     object-fit: contain;
@@ -55,8 +57,15 @@
     width: 100px;
 }
 
+
+
 .acf-block-body .acf-block-preview {
     position: relative;
+
+}
+.block-editor-block-list__layout section{
+    transform: scale(0.9);
+    transition: 0.2s;
 }
 
 .acf-relationship .list .acf-rel-item .thumbnail img {
@@ -79,16 +88,9 @@
     height: 500px !important;
 }
 
-.editor-styles-wrapper .acf-block-component .acf-field-textarea,
-.editor-styles-wrapper .acf-block-component .acf-field-tinymce-heading-editor {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    gap: 24px;
-    padding: 20px;
-}
 
-.editor-styles-wrapper .acf-block-component .acf-fields > .acf-tab-wrap {
+
+.editor-styles-wrapper .acf-block-component .acf-fields>.acf-tab-wrap {
     margin-bottom: 30px;
 }
 
@@ -120,9 +122,25 @@
     max-width: 300px;
 }
 
-.editor-styles-wrapper .acf-block-component .acf-field-textarea:before,
-.editor-styles-wrapper .acf-block-component .acf-field-tinymce-heading-editor:before,
-.editor-styles-wrapper .acf-block-component .acf-field-group:before {
+.editor-styles-wrapper .acf-block-component .acf-field-checkbox,
+.editor-styles-wrapper .acf-block-component .acf-field-text,
+.editor-styles-wrapper .acf-block-component .acf-field-image,
+.editor-styles-wrapper .acf-block-component .acf-field-textarea,
+.editor-styles-wrapper .acf-block-component .acf-field-tinymce-heading-editor,
+.editor-styles-wrapper .acf-block-component .acf-field-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 24px;
+    padding: 20px;
+}
+
+.editor-styles-wrapper .acf-block-component .acf-field-checkbox::before,
+.editor-styles-wrapper .acf-block-component .acf-field-text::before,
+.editor-styles-wrapper .acf-block-component .acf-field-image::before,
+.editor-styles-wrapper .acf-block-component .acf-field-textarea::before,
+.editor-styles-wrapper .acf-block-component .acf-field-tinymce-heading-editor::before,
+.editor-styles-wrapper .acf-block-component .acf-field-group::before {
     content: "";
     display: block;
     position: absolute;
@@ -132,21 +150,28 @@
     top: 0;
     bottom: 0;
     left: 0;
-    width: 256px;
+    width: 279.5px;
 }
 
+.editor-styles-wrapper .acf-block-component .acf-field-checkbox .acf-label,
+.editor-styles-wrapper .acf-block-component .acf-field-image .acf-label,
+.editor-styles-wrapper .acf-block-component .acf-field-text .acf-label,
 .editor-styles-wrapper .acf-block-component .acf-field-textarea .acf-label,
 .editor-styles-wrapper .acf-block-component .acf-field-tinymce-heading-editor .acf-label,
 .editor-styles-wrapper .acf-block-component .acf-field-group .acf-label {
     float: left;
-    width: 256px;
+    width: 279.5px;
     margin: 0;
 }
 
+.editor-styles-wrapper .acf-block-component .acf-field-checkbox .acf-input,
+.editor-styles-wrapper .acf-block-component .acf-field-image .acf-input,
+.editor-styles-wrapper .acf-block-component .acf-field-text .acf-input,
 .editor-styles-wrapper .acf-block-component .acf-field-textarea .acf-input,
 .editor-styles-wrapper .acf-block-component .acf-field-tinymce-heading-editor .acf-input,
 .editor-styles-wrapper .acf-block-component .acf-field-group .acf-input {
-    width: 100%;
+    width: 80%;
+    padding-left: 0 !important;
 }
 
 .editor-styles-wrapper .acfe-modal.-small.-open .acfe-modal-wrapper {
@@ -184,7 +209,7 @@
     border-left: none !important;
 }
 
-.editor-styles-wrapper .mce-toolbar-grp > div {
+.editor-styles-wrapper .mce-toolbar-grp>div {
     background: #373737;
 }
 
@@ -192,9 +217,10 @@
     color: #a5a5a5;
 }
 
-.editor-styles-wrapper .acf-fields > .acf-tab-wrap .acf-tab-group li a {
+.editor-styles-wrapper .acf-fields>.acf-tab-wrap .acf-tab-group li a {
     border: none !important;
     background: none !important;
+    font-weight: 500 !important;
 }
 
 .editor-styles-wrapper .acf-tab-group li {
@@ -211,7 +237,7 @@
 
 }
 
-.editor-styles-wrapper .acf-block-component .acf-fields > .acf-tab-wrap {
+.editor-styles-wrapper .acf-block-component .acf-fields>.acf-tab-wrap {
     background: none !important;
     border: none !important;
 }
@@ -228,8 +254,14 @@
     padding-left: 0px;
 }
 
-.editor-styles-wrapper .acf-image-uploader {
-    margin-left: 15px;
+.acf-field-text{
+    padding-left: 13px !important;
+}
+
+.acf-field-text input{
+    padding: 12px 10px !important;
+    border: 1px solid #e1e1e1 !important;
+    max-width: 928px;
 }
 
 .editor-styles-wrapper .acf-field-repeater {
@@ -240,9 +272,7 @@
     border: none !important;
 }
 
-.editor-styles-wrapper .acfe-field-group-layout-block {
-    border-top: none !important;
-}
+
 
 .editor-styles-wrapper .acf-field.acf-field-tinymce-heading-editor {
     border-bottom: none !important;
@@ -256,20 +286,13 @@
     margin-bottom: 50px;
 }
 
-.editor-styles-wrapper .acf-block-component .acf-field-textarea .acf-input,
-.editor-styles-wrapper .acf-block-component .acf-field-tinymce-heading-editor .acf-input {
-    width: 80%;
-}
-
 .editor-styles-wrapper .acf-field textarea {
     background: white;
     border: 1px solid gainsboro;
     padding: 10px;
 }
 
-.editor-styles-wrapper .acf-button.button {
-    margin-left: 20px;
-}
+
 
 .block-editor-block-inspector .acf-tab-group li a {
     padding: 5px 10px;
@@ -291,7 +314,7 @@
 }
 
 
-.block-editor-block-inspector .acf-tab-group li a{
+.block-editor-block-inspector .acf-tab-group li a {
     font-size: 12px;
 }
 
@@ -299,6 +322,7 @@
     min-width: 160px;
     text-align: center;
 }
+
 .block-editor-block-inspector .acf-tab-group {
     overflow-x: auto;
     display: flex;
@@ -319,4 +343,74 @@
     -webkit-box-shadow: inset 0 0 6px #595959;
     box-shadow: inset 0 0 5px #595959;
     border-radius: 6px;
+}
+
+.btn-is-admin{
+    pointer-events: none;
+}
+
+
+.editor-sidebar__panel .block-editor-block-inspector .acf-fields{
+    display:  none !important;
+}
+
+.editor-preview-dropdown{
+    display: none !important;
+}
+
+@media (max-width:1024px) {
+    .acf-block-preview{
+        padding: 0 !important;
+    }
+    .block-editor-block-list__layout section {
+        transform: scale(1);
+        transition: 0.2s;
+    }
+}
+
+.editor-post-panel__row-label{
+    font-size: 14px;
+}
+
+.acfe-field-group-layout-block .acf-fields.-top.-border{
+    border: none !important;
+}
+
+.acfe-field-group-layout-block  .acf-field::before{
+    display: none !important;
+}
+
+.acfe-field-group-layout-block .acf-field{
+    flex-direction: column;
+}
+
+.acfe-field-group-layout-block .acf-input .acf-field .acf-input,
+.acfe-field-group-layout-block .acf-input .acf-field .acf-label {
+    width: 100% !important;
+}
+
+.acfe-field-group-layout-block{
+    border: none !important;
+}
+
+.acfe-field-group-layout-block .acf-input .acf-field{
+    border: none !important;
+    padding: 8px !important;
+    gap: 12px !important
+}
+
+.wp-block-post-content{
+    max-width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+}
+
+.wp-block-post-content p{
+    font-family: 'Geologica';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 140%;
+    color: #000000;
 }

@@ -3,7 +3,7 @@
 }
 
 .block-editor-block-list__layout .block-editor-block-list__block{
-    max-width: 1280px;
+    max-width: 1360px;
 }
 
 .acf-block-body .acf-block-preview{
@@ -11,14 +11,12 @@
    
 }
 
+.hero{
+    padding: 40px 0;
+}
 
 .hero__content {
     text-align: left;
-}
-
-
-.hero__wrapper {
-    max-width: 90%;
 }
 
 
@@ -27,3 +25,66 @@ html, body, div, span, applet, main, object, iframe, h1, h2, h3, h4, h5, h6, p, 
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
     font-size: inherit;
 }
+
+.wp-block-post-content *{
+    font-family: 'Geologica';
+}
+.wp-block-post-content > p {
+    line-height: 2rem;
+    font-size: 1rem; 
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.wp-block-post-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+    
+.wp-block-post-content h2 {
+    font-size: 2.5rem; 
+    margin-bottom: 20px;
+}
+
+.wp-block-post-content h3 {
+    font-size: 2.125rem; 
+    margin-bottom: 20px;
+}
+
+.wp-block-post-content h4 {
+    font-size: 1.875rem; 
+    margin-bottom: 20px;
+}
+
+.wp-block-post-content h5 {
+    font-size: 1.625rem;
+    margin-bottom: 20px;
+}
+
+.wp-block-post-content h6 {
+    font-size: 1.375rem;
+    margin-bottom: 20px;
+}
+
+.wp-block-post-content ul {
+    list-style: disc;
+    padding-left: 15px;
+    
+}
+.wp-block-post-content ol {
+    list-style: decimal;
+    padding-left: 15px;
+}
+.wp-block-post-content li{
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.wp-block-post-content li::marker {
+    color: #2046d2;
+}
+
+.wp-block-post-content img{
+    margin-bottom: 15px;
+    width: 100%;
+}
+    

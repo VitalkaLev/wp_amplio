@@ -102,8 +102,8 @@
                 },
                 "main.min.css": {
                   "type": "-",
-                  "size": 77285,
-                  "lmtime": 1739985017871.999,
+                  "size": 77351,
+                  "lmtime": 1740070547894.999,
                   "modified": false
                 },
                 "swiper-bundle.css": {
@@ -381,8 +381,8 @@
                   },
                   "_hero.scss": {
                     "type": "-",
-                    "size": 15262,
-                    "lmtime": 1739974661236.945,
+                    "size": 15320,
+                    "lmtime": 1740054836225.9424,
                     "modified": false
                   },
                   "_modal.scss": {
@@ -405,8 +405,8 @@
                   },
                   "_why.scss": {
                     "type": "-",
-                    "size": 3601,
-                    "lmtime": 1739809660085.276,
+                    "size": 3627,
+                    "lmtime": 1740063893927.8352,
                     "modified": false
                   }
                 },
@@ -437,8 +437,8 @@
                   },
                   "_table.scss": {
                     "type": "-",
-                    "size": 1673,
-                    "lmtime": 1739803385984.2925,
+                    "size": 1742,
+                    "lmtime": 1740070546875.077,
                     "modified": false
                   }
                 },
@@ -521,10 +521,16 @@
             "documents": {
               "block.php": {
                 "type": "-",
-                "size": 18927,
-                "lmtime": 1739870938241.4585,
+                "size": 10269,
+                "lmtime": 1740071788439.4739,
                 "modified": false
               }
+            },
+            ".DS_Store": {
+              "type": "-",
+              "size": 6148,
+              "lmtime": 1740068077646.337,
+              "modified": false
             },
             "faq": {
               "block.php": {
@@ -534,11 +540,19 @@
                 "modified": false
               }
             },
+            "help": {
+              "block.php": {
+                "type": "-",
+                "size": 2680,
+                "lmtime": 1739874468376.5403,
+                "modified": false
+              }
+            },
             "hero": {
               "block.php": {
                 "type": "-",
-                "size": 8844,
-                "lmtime": 1739982599506.6978,
+                "size": 8891,
+                "lmtime": 1740062360584.8467,
                 "modified": false
               },
               "preview.png": {
@@ -559,16 +573,8 @@
             "why": {
               "block.php": {
                 "type": "-",
-                "size": 2056,
-                "lmtime": 1739870879716.7932,
-                "modified": false
-              }
-            },
-            "help": {
-              "block.php": {
-                "type": "-",
-                "size": 2680,
-                "lmtime": 1739874468376.5403,
+                "size": 1673,
+                "lmtime": 1740063611217.3662,
                 "modified": false
               }
             }

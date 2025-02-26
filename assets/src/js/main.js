@@ -22,6 +22,13 @@ function tabs() {
 function headerFixed(){
   const header = document.querySelector(".header");
   const links = document.querySelectorAll("a[href^='#']");
+
+  if (window.scrollY > 20) {
+    header.classList.add("header-fixed");
+  } else {
+    header.classList.remove("header-fixed");
+  }
+
   document.addEventListener("scroll", function () {
     if (window.scrollY > 20) {
       header.classList.add("header-fixed");
@@ -35,7 +42,7 @@ function headerFixed(){
           event.preventDefault();
           const targetId = this.getAttribute("href").substring(1);
           const targetElement = document.getElementById(targetId);
-            const extraOffset = window.innerWidth <= 768 ? 60 : 120;
+            const extraOffset = window.innerWidth <= 768 ? 60 : 100;
 
           if (targetElement) {
             window.scrollTo({
@@ -49,9 +56,13 @@ function headerFixed(){
 }
 
 function funcyboxInit() {
-  Fancybox.bind("[data-fancybox]", {
-    // Your custom options
-  });
+  const documents = document.querySelector('.accordion');
+  if (!documents) return
+
+  const fancyboxElements = documents.querySelectorAll('.accordion__content__item[data-fancybox]');
+  if (fancyboxElements.length > 0) {
+    Fancybox.bind("[data-fancybox]", {});
+  }
 }
 
 function accordion() {
@@ -172,16 +183,6 @@ function heroSwiper() {
       allowTouchMove: false,
     });
 
-    // Синхронізація при автоматичному переході
-    // imageswiper.on('slideChangeTransitionStart', function () {
-    //   textSwiper.slideToLoop(imageswiper.realIndex);
-    // });
-
-    // textSwiper.on('slideChangeTransitionStart', function () {
-    //   imageswiper.slideToLoop(textSwiper.realIndex);
-    // });
-
-    // Синхронізація при кліках на стрілки
     document.querySelector('.next').addEventListener('click', function () {
       imageswiper.slideNext();
       textSwiper.slideNext();
@@ -198,7 +199,6 @@ function heroSwiper() {
 
   }
 }
-
 
 function creditCalculator() {
   const creditSection = document.querySelector('.credit');
@@ -275,12 +275,21 @@ function creditCalculator() {
   }
 
   function handleCreditSubmit() {
+    const form = document.querySelector('.credit__form');
     const totalAmount = finalAmountUAH.textContent;
     const monthlyPayment = finalAmountMonth.textContent;
     const totalCosts = finalAmountCosts.textContent;
     const totalCredit = document.querySelector('#credit_amount').value;
 
-    alert(`Кредит оформлено:\nЗагальна сума: ${totalAmount}\nЩомісячний платіж: ${monthlyPayment}\nЗагальні витрати: ${totalCosts}\nСума кредиту: ${totalCredit}\nТермін: ${selectedTerm} ${getMonthLabel(selectedTerm)}`);
+    const calculatorData = {
+      amount: totalCredit,
+      term: selectedTerm
+    };
+
+    localStorage.setItem("calculator", JSON.stringify(calculatorData));
+
+    form.submit();
+    //alert(`Кредит оформлено:\nЗагальна сума: ${totalAmount}\nЩомісячний платіж: ${monthlyPayment}\nЗагальні витрати: ${totalCosts}\nСума кредиту: ${totalCredit}\nТермін: ${selectedTerm} ${getMonthLabel(selectedTerm)}`);
   }
 
   if (creditSubmit) creditSubmit.addEventListener('click', handleCreditSubmit);

@@ -1,11 +1,30 @@
 .document{
     width: 100%;
+    padding: 80px 0 80px 0;
     &__wrapper{
         width: 100%;
         max-width: 1160px;
     }
     &__content{
         margin-bottom: 36px;
+        text-align: left;
+        h2{
+            font-size: 3.5rem;
+            line-height: 120%;
+            font-weight: 400;
+            margin-bottom: 20px;
+            letter-spacing: -0.04em;
+            color: #000000;
+        }
+        p{
+            font-size: 1rem;
+            line-height: 120%;
+            font-weight: 300;
+            margin-bottom: 40px;
+            letter-spacing: -0.04em;
+            color: #30313D;
+            max-width: 300px;
+        }
     }
     &__group{
         width: 100%;
@@ -85,10 +104,10 @@
     }
 }
 @media (max-width: 774px) and (orientation: landscape) {
-
     .document{
         max-width: 90%;
         margin: 0 auto;
+        padding: 40px 0 40px 0;
         &__content{
             margin-top: 0;
         }
@@ -119,6 +138,7 @@
     .document{
         max-width: 100%;
         margin: 0 auto;
+        padding: 40px 0 40px 0;
         &__wrapper{
             max-width: calc(100% - 54px); 
             overflow: hidden;

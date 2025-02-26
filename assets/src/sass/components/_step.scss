@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 160px 20px 0 20px;
+    padding: 80px 20px 80px 20px;
     &__wrapper{
         max-width: 1160px;
         width: 100%;
@@ -85,6 +85,7 @@
                 line-height: 120%;
                 letter-spacing: -0.04em;
                 color: #353535;
+                text-align: left;
             }
         }
         &__decor{
@@ -170,10 +171,8 @@
             margin-top: 60px;
         }
         &__item{
-            &__text{
-                p{
-                    font-size: 1.25rem;
-                }
+            p{
+                font-size: 1.25rem;
             }
         }
         &__box{
@@ -227,6 +226,7 @@
             padding: 15px;
             min-height: 120px;
             &__number{
+                text-align: left;
                 max-width: 60px;
                 font-size: 64px;
             }

@@ -10,6 +10,7 @@
 @import 'elements/link';
 @import 'elements/table';
 @import 'elements/accordion';
+@import 'elements/post';
 
 //helpers
 @import 'helpers/animations';
@@ -29,4 +30,5 @@
 
 @import 'components/404';
 @import 'components/page';
+@import 'components/article';
 @import 'components/modal';

@@ -66,7 +66,7 @@ if( isset( $block['data']['preview_image_help'] )) {
                 </g>
                 <defs>
                 <linearGradient id="paint0_linear_481_195" x1="336.913" y1="131.791" x2="592.5" y2="693.5" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#2046D2"/>
+                <stop offset="0" stop-color="#2046D2"/>
                 <stop offset="1" stop-color="white"/>
                 </linearGradient>
                 <clipPath id="clip0_481_195">

@@ -59,7 +59,9 @@ legend {
     font-style: normal;
 }
 
-
+img{
+    display: block;
+}
 
 body {
     margin: 0;
@@ -69,8 +71,9 @@ body {
     color: $text;
     background-color: #F8F9FC;
 }
-main {
+.main {
     width: 100%;
+    margin-top: 120px;
 }
 .wrapper{
     width: 100%;

@@ -9,7 +9,7 @@ function add_lazy_loading_to_images($content) {
         return $content;
     }
 
-    $content = preg_replace('/<img(?!.*loading=[\'"]?lazy)[^>]+>/i', '$0 loading="lazy"', $content);
+    $content = preg_replace('/<img(?![^>]*\bloading=[\'"]?lazy\b)([^>]*?)(\/?>)/i', '<img$1 loading="lazy"$2', $content);
 
     return $content;
 }
@@ -186,3 +186,61 @@ function change_text_tab_label() {
 }
 add_action('admin_footer', 'change_text_tab_label');
 
+
+function disable_wp_default_library_css() {
+    global $wp_styles;
+    remove_action('wp_head', 'print_emoji_detection_script', 7);
+    remove_action('wp_print_styles', 'print_emoji_styles');
+    remove_action('admin_print_scripts', 'print_emoji_detection_script');
+    remove_action('admin_print_styles', 'print_emoji_styles');
+    remove_filter('the_content_feed', 'wp_staticize_emoji');
+    remove_filter('comment_text_rss', 'wp_staticize_emoji');
+    remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
+    add_filter('emoji_svg_url', '__return_false');
+    add_filter('wp_img_tag_add_auto_sizes', '__return_false');
+
+    wp_dequeue_style('wp-block-library');
+    wp_dequeue_style('wp-block-library-theme');
+    wp_dequeue_style('global-styles');
+    wp_dequeue_style('classic-theme-styles');
+
+    wp_dequeue_style('wc-blocks-style');
+
+    remove_action('wp_head', 'wp_enqueue_global_styles');
+    remove_action('wp_enqueue_scripts', 'wp_enqueue_global_styles');
+    remove_action('wp_head', 'wp_oembed_add_discovery_links');
+    remove_action('wp_head', 'wp_oembed_add_host_js');
+    remove_action('wp_head', 'rest_output_link_wp_head');
+    remove_action('wp_head', 'wp_resource_hints', 2);
+}
+add_action('wp_enqueue_scripts', 'disable_wp_default_library_css', 100);
+
+
+function remove_trailing_slashes_from_void_elements($buffer) {
+    return preg_replace('/<(img|input|br|meta|link)([^>]*?)\s?\/?>/i', '<$1$2>', $buffer);
+}
+
+add_action('template_redirect', function() {
+    ob_start(function($buffer) {
+        return remove_trailing_slashes_from_void_elements($buffer);
+    });
+});
+
+add_filter( 'wpseo_breadcrumb_single_link', function( $link_output, $link ) {
+    return '<li class="breadcrumb-item">' . $link_output . '</li>';
+}, 10, 2);
+
+add_filter( 'wpseo_breadcrumb_output', function( $output ) {
+    return '<ul class="breadcrumbs">' . str_replace( '»', '', $output ) . '</ul>';
+});
+
+add_filter( 'wpseo_breadcrumb_output', function( $output ) {
+    $output = preg_replace('/<span.*?>(.*?)<\/span>/', '$1', $output);
+    return '<nav class="breadcrumbs">' . $output . '</nav>';
+});
+
+add_filter( 'wpseo_breadcrumb_separator', function() {
+    return '<svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1 9.5L5 5.5L1 1.5" stroke="#2046D2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>';
+});
