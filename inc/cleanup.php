@@ -244,3 +244,14 @@ add_filter( 'wpseo_breadcrumb_separator', function() {
     <path d="M1 9.5L5 5.5L1 1.5" stroke="#2046D2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>';
 });
+
+add_filter('wpseo_breadcrumb_links', function($links) {
+    if (is_category()) {
+        $breadcrumb[] = array(
+            'url' => get_home_url().'/blog',
+            'text' => 'Блог',
+        );
+        array_splice($links, 1, 0, $breadcrumb);
+    }
+    return $links;
+});

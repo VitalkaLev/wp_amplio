@@ -105,6 +105,10 @@
     }
     &__text__icon {
         max-width: 64px;
+        svg{
+            width: 100%;
+            height: 100%;
+        }
     }
     &__text__item {
         display: flex;
@@ -482,5 +486,108 @@
             margin-bottom: 30px;
         }
         
+    }
+}
+
+.credit-mini{
+    max-width: 260px;
+    width: 100%;
+    padding: 0;
+    min-height: max-content;
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 0px 20px 0px rgb(233, 233, 233);
+    border-radius: 32px;
+    h4{
+        font-size: 32px;
+    }
+    .credit__wrapper{
+        min-height: auto;
+    }
+    .credit__form {
+        margin-top: 20px;
+    }
+    .credit__inner{
+        flex-direction: column;
+        padding: 0px;
+        height: max-content;
+        min-height: auto;
+        margin-bottom: 0;
+        margin-top: 5px;
+    }
+    .credit__left{
+        width: 100%;
+        padding: 20px 20px 0 20px;
+    }
+    .credit__right{
+        width: 100%;
+        padding: 0px;
+    }
+    .credit__form__row{
+        margin-bottom: 10px;
+    }
+    .credit__text__icon {
+        max-width: 48px;
+    }
+    .credit__form__input{
+        height: 40px;
+    }
+    .credit__box{
+        padding: 20px;
+        margin-bottom: 0px;
+        height: max-content;
+    }
+    .credit__text__item{
+      margin-bottom: 10px;  
+    }
+    .term__buttons{
+        display: none;
+    }
+    .credit__text__note{
+        display: none;
+    }
+    .credit__box .credit__text__item span{
+        font-size: 18px;
+    }
+    .credit__box button{
+        padding: 0px;
+        height: 60px;
+    }
+    .credit__wrapper{
+        background: none;
+    }
+    .credit__form__row label{
+        margin-bottom: 10px;
+    }
+    .credit__wrapper::before{
+        height: 100%;
+    }
+    .credit__wrapper{
+        height: 100%;
+    }
+    .btn svg {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .credit-mini{
+        max-width: 100%;
+        .credit__wrapper{
+            width: 100%;
+            max-width: 100%;
+            padding: 0;
+            margin: 0 auto;
+        }
+        .credit__inner{
+            width: 100%;
+        }
+        .credit__wrapper::before {
+            height: calc(100% + 16px);
+            width: 100%;
+            max-width: 100%;
+            top: -8px;
+        }
+
     }
 }

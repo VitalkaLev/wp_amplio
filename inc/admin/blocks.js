@@ -83,7 +83,6 @@ function creditCalculator() {
 
   if (creditSection.length) return;
 
-
   const creditRange = document.getElementById('credit_amount_range');
   const creditDisplay = document.getElementById('credit_amount');
   const termRange = document.getElementById('term_range');
@@ -158,8 +157,6 @@ function creditCalculator() {
     const monthlyPayment = finalAmountMonth.textContent;
     const totalCosts = finalAmountCosts.textContent;
     const totalCredit = document.querySelector('#credit_amount').value;
-
-    alert(`Кредит оформлено:\nЗагальна сума: ${totalAmount}\nЩомісячний платіж: ${monthlyPayment}\nЗагальні витрати: ${totalCosts}\nСума кредиту: ${totalCredit}\nТермін: ${selectedTerm} ${getMonthLabel(selectedTerm)}`);
   }
 
   if (creditSubmit) creditSubmit.addEventListener('click', handleCreditSubmit);
@@ -208,19 +205,19 @@ function loaded() {
 }
 
 function initBlocks() {
- 
-  acf.addAction('render_block', function ($el, attributes) {
-    handleBlockModeChange($el);
-  });
-  
-  acf.addAction('append', function ($el) {
-    handleBlockModeChange($el);
-  });
-  
-  acf.addAction('ready', function () {
-    handleBlockModeChange($el);
+  if (typeof acf !== 'undefined' && typeof jQuery !== 'undefined') {
+    acf.addAction('render_block', function ($el, attributes) {
+      handleBlockModeChange($el);
+    });
 
-  });
+    acf.addAction('append', function ($el) {
+      handleBlockModeChange($el);
+    });
+
+    acf.addAction('ready', function () {
+      handleBlockModeChange($el);
+    });
+  }
 }
 
 function handleBlockModeChange($el) {

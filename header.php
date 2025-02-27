@@ -19,7 +19,7 @@
         <header class="header">
             <div class="header__wrapper header-mobile">
                 <a href="<?php theme_home_url(); ?>" class="header__logo">
-                    <?php theme_image($logo, '260','60'); ?>
+                    <?php theme_image($logo, '300','50'); ?>
                 </a>
                 <div class="header__actions">
                     <a href="<?php echo esc_url('tel:'.$tel); ?>" class="header__button header__button-call">

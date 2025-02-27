@@ -26,9 +26,9 @@ if (isset($block['data']['preview_image_help'])) {
                         <?php endif; ?>
                         <picture>
                             <?php if( isset($item['image_mobile']) && !empty($item['image_mobile']) ){ ?>
-                                <source srcset="<?php echo theme_image_url($item['image_mobile'], 280, 203, ''); ?>" media="(max-width: 768px)">
+                                <source srcset="<?php echo theme_image_url($item['image_mobile'], 300, 300, ''); ?>" media="(max-width: 768px)">
                             <?php } ?>
-                            <?php theme_image($item['image_desktop'], 280, 203, ''); ?>
+                            <?php theme_image($item['image_desktop'], 300, 300, ''); ?>
                         </picture>
                     </div>
                 <?php endforeach; ?>

@@ -15,4 +15,4 @@ require PATH . '/inc/cleanup.php';
 require PATH . '/inc/enqueues.php';
 require PATH . '/inc/acf.php';
 require PATH . '/inc/helper.php';
-
+require PATH . '/inc/seo.php';
