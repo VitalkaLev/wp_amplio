@@ -90,22 +90,24 @@ if( isset( $block['data']['preview_image_help'] )) {
                 <?php if (!empty($items)) : ?>
                     <?php foreach ($items as $index => $item) : $index = $index + 1; ?>
                         <div class="help__item">
-                            <?php if (!empty($item['title'])) : ?>
-                                <h3><?php echo theme_text($item['title']); ?></h3>
-                            <?php endif; ?>
-                            <div class="help__item__text">
-                                <?php if (!empty($item['text_short'])) : ?>
-                                    <p><?php echo theme_text($item['text_short']); ?></p>
+                            <div class="help__item__inner">
+                                <?php if (!empty($item['title'])) : ?>
+                                    <h3><?php echo theme_text($item['title']); ?></h3>
                                 <?php endif; ?>
-                                <?php if (!empty($item['text_collapse'])) : ?>
-                                    <div class="help__item__hide">
-                                        <p><?php echo theme_text($item['text_collapse']); ?></p>
-                                    </div>
-                                    <button type="button" class="btn-help btn-collapse" id="help-read">
-                                        <span class="open active"><?php _e('Детальніше', THEME); ?></span>
-                                        <span class="close"><?php _e('Згорнути', THEME); ?></span>
-                                    </button>
-                                <?php endif; ?>
+                                <div class="help__item__text">
+                                    <?php if (!empty($item['text_short'])) : ?>
+                                        <p><?php echo theme_text($item['text_short']); ?></p>
+                                    <?php endif; ?>
+                                    <?php if (!empty($item['text_collapse'])) : ?>
+                                        <div class="help__item__hide">
+                                            <p><?php echo theme_text($item['text_collapse']); ?></p>
+                                        </div>
+                                        <button type="button" class="btn-help btn-collapse" id="help-read">
+                                            <span class="open active"><?php _e('Детальніше', THEME); ?></span>
+                                            <span class="close"><?php _e('Згорнути', THEME); ?></span>
+                                        </button>
+                                    <?php endif; ?>
+                                </div>
                             </div>
                             <div class="help__item__images">
                                 <picture>

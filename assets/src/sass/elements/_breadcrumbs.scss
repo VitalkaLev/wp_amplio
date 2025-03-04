@@ -1,0 +1,24 @@
+.breadcrumbs{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    a{
+        color: #5E5E5E;
+        font-size: 16px;
+        
+    }
+    li{
+        color: #5E5E5E;
+        &:first-child{
+            a{
+                color: $blue;
+            }
+        }
+    }
+    svg{
+        height: 12px;
+        width: 12px;
+        margin-left: 10px;
+    }
+}

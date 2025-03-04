@@ -204,7 +204,9 @@
         max-width: 87%;
     }
 }
-@media (max-width: 774px) and (orientation: landscape) {
+@media (max-width: 720px) and (orientation: landscape) {
+
+
     .footer{
         &__bottom{
             padding: 40px 0px;
@@ -327,7 +329,7 @@
         &__bottom{
             padding: 20px 0px;
         }
-        .footer__nav{
+        &__nav{
             padding: 20px 0;
             ul li a{
                 font-size: 14px;
@@ -346,12 +348,14 @@
             img{
                 max-width: 150px;
             }
+            p img{
+                max-width: 47%;
+            }
             p{
-                max-width: 200px;
-                &:last-child{
-                    width: 100%;
-                    margin: 0;
-                }
+                display: flex;
+                gap: 10px;                
+                width: 100%;
+                margin: 0;
             }
         }
         &__logo {
@@ -368,15 +372,19 @@
             width: 100%;
             max-width: 100%;
             gap: 10px;
+            
             ul{
-                height: 160px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
             }
-            li{
-                max-width: 50%;
-                &:nth-child(n+5) {
-                    margin-left: 10px;
+            li {
+                max-width: 100%;
+                width: 100%;
+                &:nth-child(even) {
+                    padding-left: 10px;
                 }
             }
+           
             ul li a{
                 font-size: 14px;
                 line-height: 100%;
@@ -423,7 +431,7 @@
                 }
             }
         }
-        .footer__social{
+        &__social{
             max-width: 100%;
             margin-top: 15px;
         }
@@ -436,8 +444,8 @@
                 max-width: 50%;
                 display: block;
                 width: 100%;
-                &:last-child{
-                    margin-left: 20px;
+                &:nth-child(even) {
+                    padding-left: 10px;
                 }
             }
         }
@@ -456,7 +464,6 @@
             a{
                 font-size: 14px;
             }
-            
         }
     }
 }

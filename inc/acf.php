@@ -120,8 +120,8 @@ add_action('acf/init', 'register_acf_blocks_widget');
 if( function_exists('acf_add_options_page') ) {
 
 	acf_add_options_page(array(
-		'page_title' 	=> 'Theme Settings',
-		'menu_title'	=> 'Theme Settings',
+		'page_title' 	=> 'Налаштування Сайту',
+		'menu_title'	=> 'Налаштування Сайту',
 		'icon_url'      => 'dashicons-tide',
 		'menu_slug' 	=> 'theme-general-settings',
 		'capability'	=> 'edit_posts',

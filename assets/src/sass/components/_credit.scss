@@ -338,7 +338,9 @@
     }
 }
 
-@media (max-width: 774px) and (orientation: landscape) {
+@media (max-width: 720px) and (orientation: landscape) {
+
+
     .credit{
         padding: 40px 0 40px 0;
         margin: 0 auto;
@@ -383,6 +385,7 @@
         padding: 40px 0 40px 0;
         margin: 0 auto;
         &__wrapper{
+            padding: 40px 0;
             max-width: 95%;
             &::before{
                 max-width: 88%;
@@ -392,6 +395,7 @@
             flex-direction: column;
             max-width: 90%;
             height: auto;
+            margin-top: 0;
         }
         &__left{
             max-width: 100%;
@@ -495,7 +499,7 @@
     padding: 0;
     min-height: max-content;
     position: sticky;
-    top: 0;
+    top: 160px;
     box-shadow: 0px 0px 20px 0px rgb(233, 233, 233);
     border-radius: 32px;
     h4{
@@ -573,6 +577,9 @@
 @media (max-width: 768px) {
     .credit-mini{
         max-width: 100%;
+        position: relative;
+        top: 0;
+        box-shadow: none;
         .credit__wrapper{
             width: 100%;
             max-width: 100%;
@@ -581,13 +588,74 @@
         }
         .credit__inner{
             width: 100%;
+            max-width: 100%;
+            align-items: center;
+        }
+        .credit__box {
+            margin-top: 0px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .credit__form__inner {
+            display: flex;
+            align-items: center;
+            gap: 40px;
         }
         .credit__wrapper::before {
-            height: calc(100% + 16px);
+            height: calc(100% + 8px);
             width: 100%;
             max-width: 100%;
             top: -8px;
+            transform: translate(-50%, 0);
         }
+        .credit__box button{
+            max-width: 280px;
+        }
+        .credit__text__item{
+            max-width: 50%;
+            margin-bottom: 0px;
+        }
+        .credit__text__icon{
+            display: flex;
+            align-items: center;
+        }
+    }
+}
 
+
+@media (max-width: 465px) {
+    .credit-mini{
+        max-width: 100%;
+        .credit__wrapper{
+            width: 100%;
+            max-width: 100%;
+            padding: 0;
+            margin: 0 auto;
+        }
+        .credit__form__inner {
+            display: block;
+            align-items: center;
+            gap: 0px;
+        }
+        .credit__inner{
+            width: 100%;
+        }
+        .credit__box {
+            flex-direction: column;
+        }
+        
+        .credit__wrapper::before {
+            height: calc(100% + 4px);
+            width: 100%;
+            max-width: 99%;
+            top: -4px;
+        }
+        .credit__box button{
+            max-width: 100%;
+        }
+        .credit__text__item{
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
     }
 }

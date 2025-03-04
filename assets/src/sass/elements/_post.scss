@@ -112,3 +112,12 @@
         }
     }
 }
+
+@media (max-width: 465px) {
+    .post{
+        &__image{
+            height: 223px;
+            border-radius: 24px;
+        }
+    }
+}

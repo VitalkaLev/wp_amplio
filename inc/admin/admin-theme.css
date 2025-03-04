@@ -414,3 +414,12 @@
     line-height: 140%;
     color: #000000;
 }
+
+.acf-field-image .acf-label,
+.acf-field-repeater .acf-label {
+    padding-left: 25px !important;
+}
+
+.acf-image-uploader {
+    margin-left: 10px;
+}

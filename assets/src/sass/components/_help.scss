@@ -6,6 +6,7 @@
     &__head{
         h2{
             font-size: 56px;
+            color: #30313D;
         }
     }
     
@@ -26,7 +27,7 @@
         min-height: 440px;
         height: max-content;
         &__text{
-            min-height: 120px;
+            min-height: 100px;
             a{
                 color: $blue;
                 text-decoration: underline;
@@ -101,19 +102,35 @@
         }
         &__list{
             width: 100%;
-            flex-direction: column;
             padding: 25px;
             gap: 20px;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
         &__item{
             max-width: 100%;
             min-height: max-content;
             padding: 30px 20px;
+            &:nth-child(1),&:nth-child(2){
+                max-width: 340px;
+                .help__item__images {
+                    height: 60px;
+                }
+            }
+            &:nth-child(3){
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                min-height: 275px;
+                .help__item__images{
+                    margin-top: 0;
+                }
+            }
         }
     }
 }
 
-@media (max-width: 774px) and (orientation: landscape) {
+@media (max-width: 720px) and (orientation: landscape) {
     .help{
         padding-top: 80px;
         h2{
@@ -138,8 +155,32 @@
 
 @media (max-width: 465px) {
     .help{
-        .help__list {
+        &__list {
             margin-top: 40px;
+        }
+        &__item{
+            max-width: 100%;
+            min-height: max-content;
+            padding: 30px 20px;
+            &:nth-child(1),&:nth-child(2){
+                max-width: max-content;
+                .help__item__images {
+                    height: auto;
+                }
+            }
+            &:nth-child(3){
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                min-height: max-content;
+                .help__item__images{
+                    margin-top: 20px;
+                }
+            }
+            picture img{
+                max-width: 100%;
+            }
         }
     }
 }

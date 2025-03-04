@@ -50,6 +50,36 @@ function allow_editor_access_appearance() {
 }
 add_action('init', 'allow_editor_access_appearance');
 
+function transliterate_slug($slug) {
+    $cyrillic = array(
+        'а', 'б', 'в', 'г', 'ґ', 'д', 'е', 'є', 'ж', 'з', 'и', 'і', 'ї', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ь', 'ю', 'я',
+        'А', 'Б', 'В', 'Г', 'Ґ', 'Д', 'Е', 'Є', 'Ж', 'З', 'И', 'І', 'Ї', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ь', 'Ю', 'Я'
+    );
+    
+    $latin = array(
+        'a', 'b', 'v', 'h', 'g', 'd', 'e', 'ye', 'zh', 'z', 'y', 'i', 'yi', 'y', 'k', 'l', 'm', 'n', 'o', 'p', 'r', 's', 't', 'u', 'f', 'kh', 'ts', 'ch', 'sh', 'shch', '', 'yu', 'ya',
+        'A', 'B', 'V', 'H', 'G', 'D', 'E', 'Ye', 'Zh', 'Z', 'Y', 'I', 'Yi', 'Y', 'K', 'L', 'M', 'N', 'O', 'P', 'R', 'S', 'T', 'U', 'F', 'Kh', 'Ts', 'Ch', 'Sh', 'Shch', '', 'Yu', 'Ya'
+    );
+    
+    $slug = str_replace($cyrillic, $latin, $slug);
+    $slug = strtolower($slug);
+    $slug = preg_replace('/[^a-z0-9-]/', '-', $slug);
+    $slug = preg_replace('/-+/', '-', $slug);
+    $slug = trim($slug, '-');
+    
+    return $slug;
+}
+
+function theme_slug_translation($data, $postarr) {
+    if (isset($data['post_name']) && !empty($data['post_name'])) {
+        $data['post_name'] = transliterate_slug($data['post_name']);
+    } elseif (isset($data['post_title']) && !empty($data['post_title'])) {
+        $data['post_name'] = transliterate_slug($data['post_title']);
+    }
+    return $data;
+}
+add_filter('wp_insert_post_data', 'theme_slug_translation', 10, 2);
+
 // Рендеримо зображення в колонці
 function theme_image_column_render($column_name, $post_id) {
     if ($column_name === 'post_image') {

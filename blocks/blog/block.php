@@ -45,6 +45,7 @@ if( isset( $block['data']['preview_image_help'] )) {
                     <?php } ?>
                     <div class="blog__items">
                         <?php foreach ($posts as $post) {
+                            $post_id = $post->ID;
                             $image_id = get_post_thumbnail_id($post);
                             $category = get_the_category($post); 
                             $category_name = isset($category) ? $category[1]->name : '';
@@ -64,7 +65,7 @@ if( isset( $block['data']['preview_image_help'] )) {
                                         <span class="post__date">
                                             <?php echo get_the_date('d F Y', $post); ?>
                                         </span>
-                                        <?php theme_post_view($post ,'black'); ?>
+                                        <?php theme_post_view($post_id ,'black'); ?>
                                     </div>
                                 </div>
                             </a>

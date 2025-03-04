@@ -140,6 +140,16 @@
                 width: 100%;
                 z-index: 0;
             }
+            &:after{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background: #BCBCBC;
+                height: 2px;
+                width: 100%;
+                z-index: 0;
+            }
         }
         .category-link{
            min-width: 90px;
@@ -147,7 +157,7 @@
                 content: '';
                 position: absolute;
                 bottom: 0;
-                left: 0;
+                left: 40%;
                 background: #BCBCBC;
                 height: 2px;
                 width: 100%;

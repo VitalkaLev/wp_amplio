@@ -20,7 +20,7 @@ if( isset( $block['data']['preview_image_help'] )) {
                     <?php } else { ?>
                         <h4>Яка сума Вам потрібна?</h4>
                     <?php } ?>
-                    <form method="POST" action="<?php theme_home_url(); ?>/online/" class="credit__form animate-fade" data-delay="0.7s">
+                    <form method="POST" action="<?php theme_home_url(); ?>/online/" class="credit__form">
                         <div class="credit__form__inner">
                             <div class="credit__form__row">
                                 <?php if (!empty($sum)) : ?>
@@ -55,7 +55,7 @@ if( isset( $block['data']['preview_image_help'] )) {
                 </div>
                 <div class="credit__right">
                     <div class="credit__box">
-                        <div class="credit__text__item animate-fade" data-delay="0.4s">
+                        <div class="credit__text__item">
                             <div class="credit__text__icon">
                                 <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect width="60" height="60" rx="16" fill="#2046D2"></rect>
@@ -79,7 +79,7 @@ if( isset( $block['data']['preview_image_help'] )) {
                             </div>
                         </div>
                         <?php if (!empty($button)) : ?>
-                            <button id="creditSubmit" class="btn btn-primary h-bg h-full green animate-fade <?php if(is_admin()){ echo 'btn-is-admin';} ?>" data-delay="0.5s">
+                            <button id="creditSubmit" class="btn btn-primary h-bg h-full green">
                                 <span><?php echo theme_text($button_text); ?></span>
                                 <?php if($button_icon == false){ ?>
                                     <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -89,7 +89,7 @@ if( isset( $block['data']['preview_image_help'] )) {
                             </button>
                         <?php endif; ?>
                         <?php if (!empty($text)) : ?>
-                            <span class="credit__text__note animate-fade" data-delay="0.7s"><?php echo theme_text($text); ?></span>
+                            <span class="credit__text__note"><?php echo theme_text($text); ?></span>
                         <?php endif; ?>
                     </div>
                     <div class="credit__text hidden">

@@ -1,53 +1,71 @@
 <?php 
     get_header();
 
-    $id = get_the_ID();
-    $category = get_the_category($id); 
-    $share = theme_post_share($id);
+    $post_id = get_the_ID();
+    $category = get_the_category($post_id); 
+    $share = theme_post_share($post_id);
+    $category_id = isset($category) ? $category[1]->term_id : '';
+    $category_name = isset($category) ? $category[1]->name : '';
+    $category_slug = get_category_link($category_id);
+
+    $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => -12,
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'cat' => $category_id,
+        'post__not_in' => array($post_id),
+    );
+
+    $query = new WP_Query($args);
+    $count = $query->post_count;
+    $recently = $query->posts;
 ?>
 
 <div class="main">
-    <div class="page__wrapper container">
-        <div class="page__head">
-            <a href="<?php echo esc_url(theme_home_url().'/blog'); ?>">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.99967 12.6668L3.33301 8.00016M3.33301 8.00016L7.99967 3.3335M3.33301 8.00016H12.6663" stroke="#2046D2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                Назад
-            </a>
-            <?php if ( function_exists('yoast_breadcrumb') ) {
-                yoast_breadcrumb();
-            } ?>
-            <?php if (!has_post_thumbnail()) { ?>
-                <h1><?php the_title(); ?></h1>
-            <?php } ?>
-        </div>
-        <div class="article">
-            <div class="article__content">
-                <?php if (has_post_thumbnail()) { ?>
-                    <div class="article__image" style="background-image:url(<?php the_post_thumbnail_url('large'); ?>)">
-                        <div class="article__image__content">
-                            <h1><?php the_title(); ?></h1>
-                            <div class="article__group">
-                                <a href="<?php echo esc_url(get_category_link($category[1]->term_id)); ?>" class="article__category">
-                                    <?php echo $category[1]->name; ?>
-                                </a>
-                                <span class="article__date">
-                                    <?php echo get_the_date('d F Y', $id); ?>
-                                </span>
-                                <?php theme_post_view($id,'white'); ?>
+    <div class="article">
+        <div class="article__wrapper container">
+            <div class="article__head">
+                <a href="<?php echo theme_home_url().'/blog'; ?>" class="article__back">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.99967 12.6668L3.33301 8.00016M3.33301 8.00016L7.99967 3.3335M3.33301 8.00016H12.6663" stroke="#2046D2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <?php _e('Назад', THEME); ?>
+                </a>
+                <?php 
+                    theme_breadcrumbs();
+                ?>
+                <?php if (!has_post_thumbnail()) { ?>
+                    <h1><?php the_title(); ?></h1>
+                <?php } ?>
+            </div>
+            <div class="article__inner">
+                <div class="article__content h-content">
+                    <?php if (has_post_thumbnail()) { ?>
+                        <div class="article__image h-opacity" style="background-image:url(<?php the_post_thumbnail_url('large'); ?>)">
+                            <div class="article__image__content">
+                                <h1><?php the_title(); ?></h1>
+                                <div class="article__group">
+                                    <a href="<?php echo esc_url($category_slug); ?>" class="article__category">
+                                        <?php echo $category_name; ?>
+                                    </a>
+                                    <span class="article__date">
+                                        <?php echo get_the_date('d F Y', $post_id); ?>
+                                    </span>
+                                    <?php theme_post_view($post_id,'white'); ?>
+                                </div>
                             </div>
                         </div>
+                    <?php } ?>
+                    <div class="h-content">
+                        <?php the_content(); ?>
                     </div>
-                <?php } ?>
-                <div class="article h-content">
-                    <?php the_content(); ?>
-                    <div class="article__bottom">
-                        <div class="article__part h-flex">
+                    <div class="article__group article__group-bottom">
+                        <div class="article__part">
                             <span class="article__date">
-                                <?php echo get_the_date('d F Y', $id); ?>
+                                <?php echo get_the_date('d F Y', $post_id); ?>
                             </span>
-                            <?php theme_post_view($id,'black'); ?>
+                            <?php theme_post_view($post_id,'black'); ?>
                         </div>
                         <div class="article__share">
                             <span>
@@ -80,8 +98,61 @@
                         </div>
                     </div>
                 </div>
+                <div class="article__sidebar">
+                    <?php theme_sidebar() ; ?>
+                </div>
             </div>
-            <div class="article__sidebar"></div>
+            <div class="article__recently">
+                <h2>
+                    <?php _e("Інші статті",THEME); ?>
+                </h2>
+                <?php if( !empty($recently) ){ ?>
+                    <div class="article__slider">
+                        <div class="article__buttons">
+                            <button class="prev">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="24" cy="24" r="24" stroke="#98E48A"/>
+                                    <path d="M24 29.8333L18.1666 24M18.1666 24L24 18.1666M18.1666 24H29.8333" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <button class="next active">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="24" cy="24" r="24" stroke="#98E48A"/>
+                                    <path d="M24 29.8333L29.8334 24M29.8334 24L24 18.1666M29.8334 24H18.1667" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="swiper-wrapper article__slider__wrapper">
+                            <?php foreach ($recently as $item) { 
+                                $post = $item->ID;
+                                $image_id = get_post_thumbnail_id($post);
+                                $recently_category = get_the_category($post); 
+                                $recently_category_name = isset($recently_category) ? $recently_category[1]->name : '';
+                                ?> 
+                                <a href="<?php echo esc_url( get_the_permalink($post) ); ?>" class="swiper-slide post article__item">
+                                    <div class="post__image h-opacity">
+                                        <?php echo theme_image($image_id,'260','180'); ?>
+                                        <span class="post__category post__category--label">
+                                            <?php echo theme_text($recently_category_name); ?>
+                                        </span>
+                                    </div>
+                                    <div class="post__box">
+                                        <span class="post__title">
+                                            <?php echo theme_text(get_the_title($post)); ?>
+                                        </span>
+                                        <div class="post__group">
+                                            <span class="post__date">
+                                                <?php echo get_the_date('d F Y', $post); ?>
+                                            </span>
+                                            <?php theme_post_view($post ,'black'); ?>
+                                        </div>
+                                    </div>
+                                </a>
+                            <?php } ?>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div> 
         </div>
     </div>
 </div>

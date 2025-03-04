@@ -226,32 +226,35 @@ add_action('template_redirect', function() {
     });
 });
 
-add_filter( 'wpseo_breadcrumb_single_link', function( $link_output, $link ) {
-    return '<li class="breadcrumb-item">' . $link_output . '</li>';
-}, 10, 2);
-
 add_filter( 'wpseo_breadcrumb_output', function( $output ) {
-    return '<ul class="breadcrumbs">' . str_replace( '»', '', $output ) . '</ul>';
-});
-
-add_filter( 'wpseo_breadcrumb_output', function( $output ) {
+    // Видаляємо теги <span>, щоб уникнути небажаних обгорток
     $output = preg_replace('/<span.*?>(.*?)<\/span>/', '$1', $output);
-    return '<nav class="breadcrumbs">' . $output . '</nav>';
+    // Видаляємо непотрібний символ '»'
+    $output = str_replace('»', '', $output);
+    return '<nav class="breadcrumbs"><ul class="breadcrumbs__wrapper">' . $output . '</ul></nav>';
 });
 
+// Визначення роздільника breadcrumbs як окремого елемента списку
 add_filter( 'wpseo_breadcrumb_separator', function() {
-    return '<svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M1 9.5L5 5.5L1 1.5" stroke="#2046D2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>';
+    return '<li class="breadcrumb-separator"><svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1 9.5L5 5.5L1 1.5" stroke="#5E5E5E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg></li>';
 });
 
+// Додавання пункту "Блог" для категорій та записів
 add_filter('wpseo_breadcrumb_links', function($links) {
-    if (is_category()) {
-        $breadcrumb[] = array(
-            'url' => get_home_url().'/blog',
+    if ( is_category() || is_single() ) {
+        $breadcrumb = array(
+            'url'  => get_home_url() . '/blog',
             'text' => 'Блог',
         );
-        array_splice($links, 1, 0, $breadcrumb);
+        // Вставляємо "Блог" після першого елемента (зазвичай це домашня сторінка)
+        array_splice($links, 1, 0, [$breadcrumb]);
     }
     return $links;
 });
+
+// Обгортання кожного окремого пункту в <li> з класом "breadcrumb-item"
+add_filter('wpseo_breadcrumb_single_link', function($link_output, $link) {
+    return '<li class="breadcrumb-item">' . $link_output . '</li>';
+}, 10, 2);
